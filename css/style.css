@@ -28,6 +28,9 @@ body {
     font-family: "Inter", sans-serif;
     margin-bottom: 20px;
 }
+.droplist__fields {
+    padding: 25px 20px;
+}
 .droplist__items {
     display: none;
     padding: 0;
@@ -50,6 +53,7 @@ body {
 }
 .droplist__item:hover {
     color: #5898FF;
+    background-color: #EFF5FF;
 }
 .droplist__select .droplist__item_active {
     color: #5898FF;
@@ -57,8 +61,8 @@ body {
 }
 .droplist__icon {
     position: absolute;
-    right: 15px;
-    top: 17px;
+    right: 16px;
+    top: 14px;
     cursor: pointer;
 }
 .droplist__icon_arrow {
