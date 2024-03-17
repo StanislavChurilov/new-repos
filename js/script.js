@@ -18,6 +18,12 @@ $(document).ready(function () {
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text('Ни чего не выбрано');
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
         }
+        if($(this).closest('.droplist').find('.droplist__result_text').text().length > 40) {
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_max');
+        }
+        else {
+            $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_max');
+        }
        }
         
         $(this).addClass('droplist__item_active').siblings().removeClass('droplist__item_active');
@@ -61,7 +67,6 @@ $(document).ready(function () {
     });
     
     $('.wrapper').click(function (e) { 
-        
         if ($(".droplist").has(e.target).length === 0){
             $(".droplist").removeClass('droplist_active');
         }

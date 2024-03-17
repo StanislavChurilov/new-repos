@@ -191,6 +191,18 @@ body {
     padding: 0 15px;
     box-sizing: border-box;
 }
+.droplist__icon_hide {
+    display: none;
+}
+.droplist__result_max .droplist__icon_hide {
+    display: block;
+}
+.droplist__result_max .droplist__icon_arrow {
+    transform: rotate(360deg);
+}
+.droplist__result_max .droplist__icon_arrow path {
+    fill: #5898FF;
+}
 
 @media screen and (max-width: 480px) {
     .container {
