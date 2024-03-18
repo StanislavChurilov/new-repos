@@ -182,6 +182,11 @@ body {
     background: url('../img/check.svg') center center no-repeat;
     background-color: #5898FF;
 }
+.check:hover+label::before {
+    border-color: #5898FF;
+    background: url('../img/check.svg') center center no-repeat;
+    background-color: #5898FF;
+}
 .droplist__fields .droplist__items {
     padding-top: 15px;
     padding-bottom: 15px;

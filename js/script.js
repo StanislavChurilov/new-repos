@@ -34,10 +34,6 @@ $(document).ready(function () {
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_max');
         }
        }
-
-       if($(this).closest('.droplist').hasClass('droplist__fields')) {
-        
-       }
         
         $(this).addClass('droplist__item_active').siblings().removeClass('droplist__item_active');
         
@@ -70,16 +66,6 @@ $(document).ready(function () {
         }
         
     });
-    // $('.droplist__item_hide').click(function () {
-    //    if($(this).children('.check').is(':checked')) {
-    //     $(this).siblings('.droplist__item').fadeOut();
-    //     $(this).closest('.droplist').find('.droplist__result').fadeOut();
-    //    }
-    //    else {
-    //     $(this).siblings('.droplist__item').fadeIn();
-    //     $(this).closest('.droplist').find('.droplist__result').fadeIn();
-    //    }  
-    // });
     
     $('.wrapper').click(function (e) { 
         if ($(".droplist").has(e.target).length === 0){
