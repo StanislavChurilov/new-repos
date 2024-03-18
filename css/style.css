@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: baseline;
 }
 .droplist {
     min-width: 332px;
@@ -31,12 +32,6 @@ body {
 }
 .droplist__fields {
     padding: 25px 20px;
-}
-.droplist__fields .droplist__result {
-    width: auto;
-    display: inline-block;
-    min-width: 199px;
-    max-width: 100%;
 }
 .droplist__fields .droplist__selected {
     display: inline-flex;
@@ -65,6 +60,12 @@ body {
     cursor: pointer;
     height: 40px;
     display: flex;
+}
+.droplist__item:first-child {
+    border-radius: 5px 5px 0 0;
+}
+.droplist__item:last-child {
+    border-radius: 0 0 5px 5px;
 }
 .droplist_active .droplist__items {
     display: block;
@@ -117,10 +118,20 @@ body {
 }
 .droplist__result {
     margin-top: 25px;
+    display: none;
 }
 .droplist__result_active {
     background-color: #EFF5FF;
     color: #5898FF;
+}
+.droplist_active .droplist__result {
+    display: block;
+}
+.droplist__fields.droplist_active .droplist__result {
+    width: auto;
+    display: inline-block;
+    min-width: 199px;
+    max-width: 100%;
 }
 .droplist__result_active .droplist__icon_cross {
     display: block;
@@ -195,6 +206,8 @@ body {
 }
 .droplist__fields .droplist__item:last-child {
     margin-bottom: 0;
+    width: calc(100% - 30px);
+    margin: 0 auto;
 }
 .droplist__field {
     display: block;
@@ -207,10 +220,12 @@ body {
     border-radius: 5px;
 }
 .droplist__field:focus {
-    background-color: #fff;
+    background-color: #EFF5FF;
+    outline: 1px solid #5898FF;
+    
 }
 .droplist__fields .droplist__item label {
-    padding: 0 15px;
+    padding: 0;
     box-sizing: border-box;
 }
 .droplist__icon_hide {

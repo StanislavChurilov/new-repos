@@ -4,6 +4,7 @@ $(document).ready(function () {
     });
     $('.droplist__item').click(function () {
         let currentVal = $(this).text();
+        $(this).closest('.droplist').find('.droplist__result').show();
         if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check'))
         $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
        if($(this).closest('.droplist').hasClass('droplist__select')) {
@@ -15,7 +16,7 @@ $(document).ready(function () {
         }).get().join(', ');
         $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentValChecked);
         if (currentValChecked == 0) {
-            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text('Ни чего не выбрано');
+            $(this).closest('.droplist').find('.droplist__result').hide();
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
         }
         if($(this).closest('.droplist').find('.droplist__result_text').text().length > 40) {
@@ -30,7 +31,7 @@ $(document).ready(function () {
         
     });
     $('.droplist__icon_cross').click(function () { 
-        $(this).siblings('.droplist__result_text').text('Ни чего не выбрано');
+        $(this).closest('.droplist').find('.droplist__result').hide();
         $(this).closest('.droplist__result').removeClass('droplist__result_active');
         $(this).closest('.droplist').find('.droplist__item').removeClass('droplist__item_active');
         $(this).closest('.droplist').find('.droplist__field').val('');
@@ -51,20 +52,20 @@ $(document).ready(function () {
         }
         if($('.droplist__field').val() == '') {
             $(this).closest('.droplist').children('.droplist__result').removeClass('droplist__result_active');
-            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text('Ни чего не выбрано');
+            $(this).closest('.droplist').find('.droplist__result').hide();
         }
         
     });
-    $('.droplist__item_hide').click(function () {
-       if($(this).children('.check').is(':checked')) {
-        $(this).siblings('.droplist__item').fadeOut();
-        $(this).closest('.droplist').find('.droplist__result').fadeOut();
-       }
-       else {
-        $(this).siblings('.droplist__item').fadeIn();
-        $(this).closest('.droplist').find('.droplist__result').fadeIn();
-       }  
-    });
+    // $('.droplist__item_hide').click(function () {
+    //    if($(this).children('.check').is(':checked')) {
+    //     $(this).siblings('.droplist__item').fadeOut();
+    //     $(this).closest('.droplist').find('.droplist__result').fadeOut();
+    //    }
+    //    else {
+    //     $(this).siblings('.droplist__item').fadeIn();
+    //     $(this).closest('.droplist').find('.droplist__result').fadeIn();
+    //    }  
+    // });
     
     $('.wrapper').click(function (e) { 
         if ($(".droplist").has(e.target).length === 0){
