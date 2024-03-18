@@ -71,4 +71,7 @@ $(document).ready(function () {
             $(".droplist").removeClass('droplist_active');
         }
     });
+    $('.droplist__icon_toggle').click(function (e) { 
+        $(this).parent('.droplist__result').toggleClass('droplist__toggle');
+    });
 });
