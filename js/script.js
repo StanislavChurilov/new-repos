@@ -26,6 +26,7 @@ $(document).ready(function () {
             $(this).closest('.droplist').find('.droplist__result').hide();
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
         }
+        console.log($(this).closest('.droplist').find('.droplist__result_text').text().length)
         if($(this).closest('.droplist').find('.droplist__result_text').text().length > 40) {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_max');
         }
