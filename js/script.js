@@ -3,14 +3,21 @@ $(document).ready(function () {
         $(this).closest('.droplist').toggleClass('droplist_active');
     });
     $('.droplist__item').click(function () {
+
         let currentVal = $(this).text();
-        $(this).closest('.droplist').find('.droplist__result').show();
-        if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check'))
+        
         $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
+        if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check')) {
+            $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
+        }
+       
        if($(this).closest('.droplist').hasClass('droplist__select')) {
         $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentVal);
+        $(this).closest('.droplist').find('.droplist__result').show();
        }
+
        if($(this).closest('.droplist').hasClass('droplist__check')) {
+        $(this).closest('.droplist').find('.droplist__result').show();
         let currentValChecked = $('.check:checked').map(function () {
             return $(this).val();
         }).get().join(', ');
@@ -25,6 +32,10 @@ $(document).ready(function () {
         else {
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_max');
         }
+       }
+
+       if($(this).closest('.droplist').hasClass('droplist__fields')) {
+        
        }
         
         $(this).addClass('droplist__item_active').siblings().removeClass('droplist__item_active');
@@ -42,6 +53,8 @@ $(document).ready(function () {
         let currentToVal = $('.droplist__field_to').val();
         let fromValResult = 'от ' + currentFromVal.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         let toValResult = ' до ' + currentToVal.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        $(this).closest('.droplist').find('.droplist__result').show();
+        $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text('');
         if($('.droplist__field_from').val()) {
             $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult);
