@@ -204,6 +204,7 @@ body {
     border: none;
     background-color: #F4F6F8;
     height: 40px;
+    border-radius: 5px;
 }
 .droplist__field:focus {
     background-color: #fff;
