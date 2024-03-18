@@ -117,7 +117,6 @@ body {
 }
 .droplist__result {
     margin-top: 25px;
-    padding-right: 40px;
 }
 .droplist__result_active {
     background-color: #EFF5FF;
@@ -185,6 +184,9 @@ body {
 }
 .droplist__fields {
     min-width: 301px;
+}
+.droplist__fields .droplist__result {
+    padding-right: 40px;
 }
 .droplist__fields .droplist__item {
     padding: 0;
