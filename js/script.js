@@ -1,32 +1,34 @@
 $(document).ready(function () {
-    $('.droplist__selected').click(function () { 
+    $('.droplist__selected').click(function () {
+        
         $(this).closest('.droplist').toggleClass('droplist_active');
+        
     });
     $('.droplist__item').click(function () {
 
         let currentVal = $(this).text();
-        
-        $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
+
         if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check')) {
             $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
         }
        
        if($(this).closest('.droplist').hasClass('droplist__select')) {
         $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentVal);
-        $(this).closest('.droplist').find('.droplist__result').show();
        }
 
        if($(this).closest('.droplist').hasClass('droplist__check')) {
-        $(this).closest('.droplist').find('.droplist__result').show();
+
+        $(this).closest('.droplist').find('.droplist__result').addClass();
         let currentValChecked = $('.check:checked').map(function () {
             return $(this).val();
         }).get().join(', ');
         $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentValChecked);
+
         if (currentValChecked == 0) {
-            $(this).closest('.droplist').find('.droplist__result').hide();
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result_text').text('Выберите несколько вариантов');
         }
-        console.log($(this).closest('.droplist').find('.droplist__result_text').text().length)
+        
         if($(this).closest('.droplist').find('.droplist__result_text').text().length > 40) {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_max');
         }
@@ -39,10 +41,15 @@ $(document).ready(function () {
         
     });
     $('.droplist__icon_cross').click(function () { 
-        $(this).closest('.droplist').find('.droplist__result').hide();
         $(this).closest('.droplist__result').removeClass('droplist__result_active');
         $(this).closest('.droplist').find('.droplist__item').removeClass('droplist__item_active');
         $(this).closest('.droplist').find('.droplist__field').val('');
+        if($(this).closest('.droplist').hasClass('droplist__select')) {
+            $(this).closest('.droplist').find('.droplist__result_text').text('Выберите 1 вариант');
+        }
+        if($(this).closest('.droplist').hasClass('droplist__fields')) {
+            $(this).closest('.droplist').find('.droplist__result_text').text('Заработная плата');
+        }
     });
 
     $('.droplist__field').keyup(function () {
@@ -52,7 +59,7 @@ $(document).ready(function () {
         let toValResult = ' до ' + currentToVal.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         $(this).closest('.droplist').find('.droplist__result').show();
         $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text('');
-        if($('.droplist__field_from').val()) {
+        if($('.droplist__field_from').val() !== '') {
             $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult);
         }
@@ -62,7 +69,6 @@ $(document).ready(function () {
         }
         if($('.droplist__field').val() == '') {
             $(this).closest('.droplist').children('.droplist__result').removeClass('droplist__result_active');
-            $(this).closest('.droplist').find('.droplist__result').hide();
         }
         
     });

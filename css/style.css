@@ -116,20 +116,24 @@ body {
 .droplist_active .droplist__selected {
     color: #000;
 }
-.droplist__result {
-    margin-top: 25px;
-    display: none;
+.droplist_active .droplist__result_active {
+    background-color: #EFF5FF;
+    color: #5898FF;
 }
 .droplist__result_active {
     background-color: #EFF5FF;
     color: #5898FF;
 }
+.droplist__result_active .droplist__icon_arrow {
+    display: none;
+}
+
 .droplist_active .droplist__result {
     display: block;
 }
 .droplist__fields.droplist_active .droplist__result {
     width: auto;
-    display: inline-block;
+    display: inline-flex;
     min-width: 199px;
     max-width: 100%;
 }
