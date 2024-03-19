@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    $('.droplist__selected').click(function () {
+    $('.droplist__selected').click(function (e) {
         
-        $(this).closest('.droplist').toggleClass('droplist_active');
+        $(this).closest('.droplist').addClass('droplist_active');
         
     });
     $('.droplist__item').click(function () {
