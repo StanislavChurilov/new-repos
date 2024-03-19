@@ -79,7 +79,6 @@ $(document).ready(function () {
         
     });
     
-   
     $(".droplist").mouseup( function(e){ 
 		let drop = $( ".form__list" ); 
 		if ( !drop.is(e.target) 
@@ -87,7 +86,5 @@ $(document).ready(function () {
                 $(this).removeClass('droplist_active');
 		}
 	});
-    // $('.droplist__icon_toggle').click(function (e) { 
-    //     $(this).parent('.droplist__result').toggleClass('droplist__toggle');
-    // });
+   
 });

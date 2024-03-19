@@ -128,7 +128,6 @@ body {
 .droplist__result_active .droplist__icon_arrow {
     display: none;
 }
-
 .droplist_active .droplist__result {
     display: block;
 }
