@@ -65,7 +65,11 @@ $(document).ready(function () {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult);
         }
-        if($('.droplist__field_from').val()  !== '' && $('.droplist__field_to').val()  !== '') {
+        if($('.droplist__field_to').val()  !== '') {
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(toValResult);
+        }
+        if($('.droplist__field_from').val() !== '' && $('.droplist__field_to').val()  !== '') {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult + toValResult);
         }
