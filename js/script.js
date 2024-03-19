@@ -27,14 +27,12 @@ $(document).ready(function () {
         if (currentValChecked == 0) {
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result_text').text('Выберите несколько вариантов');
-        }
-        
-        if($(this).closest('.droplist').find('.droplist__result_text').text().length > 40) {
-            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_max');
-        }
-        else {
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_max');
         }
+        else {
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_max');
+        }
+        
        }
         
         $(this).addClass('droplist__item_active').siblings().removeClass('droplist__item_active');
@@ -73,12 +71,15 @@ $(document).ready(function () {
         
     });
     
-    $('.wrapper').click(function (e) { 
-        if ($(".droplist").has(e.target).length === 0){
-            $(".droplist").removeClass('droplist_active');
-        }
-    });
-    $('.droplist__icon_toggle').click(function (e) { 
-        $(this).parent('.droplist__result').toggleClass('droplist__toggle');
-    });
+   
+    $(document).mouseup( function(e){ 
+		let drop = $( ".droplist" ); 
+		if ( !drop.is(e.target) 
+		    && drop.has(e.target).length === 0 ) { 
+                drop.removeClass('droplist_active');
+		}
+	});
+    // $('.droplist__icon_toggle').click(function (e) { 
+    //     $(this).parent('.droplist__result').toggleClass('droplist__toggle');
+    // });
 });
