@@ -21,7 +21,7 @@ body {
     display: inline-block;
     height: auto;
     border: 1px dashed #9747FF;
-    padding: 20px;
+    padding: 20px 19px;
     box-sizing: border-box;
     border-radius: 5px;
     font-size: 14px;
@@ -57,6 +57,7 @@ body {
     box-sizing: border-box;
     background-color: #FFF;
     border-bottom: 1px solid #EDEFF5;
+    color: #2F353D;
     cursor: pointer;
     height: 40px;
     display: flex;
@@ -114,7 +115,7 @@ body {
     background-color: #F4F6F8;
 }
 .droplist_active .droplist__selected {
-    color: #000;
+    color: #2F353D;
 }
 .droplist_active .droplist__result_active {
     background-color: #EFF5FF;
@@ -134,8 +135,11 @@ body {
 .droplist__fields.droplist_active .droplist__result {
     width: auto;
     display: inline-flex;
-    min-width: 199px;
+    min-width: 182px;
     max-width: 100%;
+}
+.droplist__fields .droplist__result_active .droplist__result_text {
+    padding-right: 20px;
 }
 .droplist__result_active .droplist__icon_cross {
     display: block;
@@ -144,7 +148,7 @@ body {
     transform: rotate(180deg);
 }
 .droplist_active .droplist__icon_arrow path {
-    fill: #000;
+    fill: #2F353D;
 }
 .droplist__result_text {
     max-width: 240px;
@@ -204,9 +208,6 @@ body {
 }
 .droplist__fields {
     min-width: 301px;
-}
-.droplist__fields .droplist__result {
-    padding-right: 50px;
 }
 .droplist__fields .droplist__item {
     padding: 0;

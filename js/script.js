@@ -1,7 +1,11 @@
 $(document).ready(function () {
     $('.droplist__selected').click(function (e) {
+        let cross = $( ".droplist__icon_cross" ); 
         
-        $(this).closest('.droplist').addClass('droplist_active');
+        if ( !cross.is(e.target) 
+		    && cross.has(e.target).length === 0 ) { 
+                $(this).closest('.droplist').toggleClass('droplist_active');
+		}
         
     });
     $('.droplist__item').click(function () {
@@ -19,7 +23,7 @@ $(document).ready(function () {
        if($(this).closest('.droplist').hasClass('droplist__check')) {
 
         $(this).closest('.droplist').find('.droplist__result').addClass();
-        let currentValChecked = $('.check:checked').map(function () {
+        let currentValChecked = $('.droplist__check .check:checked').map(function () {
             return $(this).val();
         }).get().join(', ');
         $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentValChecked);
