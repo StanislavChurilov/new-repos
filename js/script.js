@@ -9,7 +9,7 @@ $(document).ready(function () {
         let currentVal = $(this).text();
 
         if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check')) {
-            $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
         }
        
        if($(this).closest('.droplist').hasClass('droplist__select')) {
@@ -58,11 +58,11 @@ $(document).ready(function () {
         $(this).closest('.droplist').find('.droplist__result').show();
         $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text('');
         if($('.droplist__field_from').val() !== '') {
-            $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult);
         }
         if($('.droplist__field_from').val()  !== '' && $('.droplist__field_to').val()  !== '') {
-            $(this).closest('.droplist').children('.droplist__result').addClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult + toValResult);
         }
         if($('.droplist__field').val() == '') {
