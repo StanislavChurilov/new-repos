@@ -72,11 +72,11 @@ $(document).ready(function () {
     });
     
    
-    $(document).mouseup( function(e){ 
-		let drop = $( ".droplist" ); 
+    $(".droplist").mouseup( function(e){ 
+		let drop = $( ".form__list" ); 
 		if ( !drop.is(e.target) 
 		    && drop.has(e.target).length === 0 ) { 
-                drop.removeClass('droplist_active');
+                $(this).removeClass('droplist_active');
 		}
 	});
     // $('.droplist__icon_toggle').click(function (e) { 
