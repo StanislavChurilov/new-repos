@@ -147,7 +147,7 @@ body {
     .vacancy__tariff_container {
         padding: 13px;
     }
-    .vacancy__text_xl, .vacancy__text_sm {
+    .vacancy__text_xl, .vacancy__text_sm { 
         font-size: 20px;
         line-height: 24.2px;
     }
