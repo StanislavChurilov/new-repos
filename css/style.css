@@ -98,6 +98,72 @@ body {
     border-bottom: 1px solid #EDEFF5;
     padding-bottom: 25px;
 }
+.vacancy__resume_line {
+    padding: 14px 25px;
+    background-color: #F4F6F8;
+    margin-bottom: 10px;
+    border-radius: 5px 15px 15px 5px;
+    display: flex;
+    align-items: center;
+}
+.vacancy__resume_totalresponses {
+    max-width: 1045px;
+}
+.vacancy__resume_unassembled {
+    max-width: 561px;
+}
+.vacancy__resume_rejected {
+    max-width: 816px;
+}
+.vacancy__resume_telephone_interview {
+    max-width: 906px;
+}
+.vacancy__resume_rejected {
+    max-width: 816px;
+}
+.vacancy__accepted {
+    max-width: 564px;
+}
+.vacancy__manager {
+    max-width: 465px;
+}
+.vacancy__wait {
+    max-width: 465px;
+}
+.vacancy__condition {
+    max-width: 465px;
+    margin-bottom: 0;
+}
+.vacancy__resume_text {
+    font-size: 15px;
+    line-height: 18.15px;
+}
+.vacancy__resume_progress {
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 18px;
+    line-height: 21.78px;
+    font-weight: 500;
+}
+.vacancy__resume_numbers {
+    width: 50px;
+    margin-right: 10px;
+    font-size: 18px;
+    line-height: 21.78px;
+    font-weight: 500;
+}
+.vacancy__statistics_view {
+    display: none;
+    overflow-x: auto;
+    max-width: 100%;
+}
+.vacancy__statistics_view img {
+    width: 1070px;
+    max-width: none;
+}
+.vacancy__statistics_view.view_active {
+    display: block;
+}
 
 @media screen and (max-width: 1170px) {
     .container {
