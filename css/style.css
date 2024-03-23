@@ -156,6 +156,28 @@ body {
     display: none;
     overflow-x: auto;
     max-width: 100%;
+    transform: rotateX(180deg);
+    padding-bottom: 69px;
+}
+.vacancy__statistics_container {
+    position: relative;
+}
+.vacancy__statistics_view img {
+    transform: rotateX(180deg);
+}
+.vacancy__statistics_view::-webkit-scrollbar {
+    height: 10px;
+    padding-bottom: 100px;
+}
+  
+.vacancy__statistics_view::-webkit-scrollbar-track {
+    background: #F9FAFC; /* Цвет дорожки */
+}
+  
+.vacancy__statistics_view::-webkit-scrollbar-thumb {
+    background-color: #5898FF; /* Цвет бегунка */
+    border-radius: 3px; /* Округление бегунка */
+    border: none; /* Оформление границ бегунка */
 }
 .vacancy__statistics_view img {
     width: 1070px;
@@ -163,6 +185,85 @@ body {
 }
 .vacancy__statistics_view.view_active {
     display: block;
+}
+.vacancy__statistics_circle {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: #EFF5FF;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.vacancy__switch_button.active .vacancy__statistics_circle {
+    background-color: #5898FF;
+}
+.vacancy__switch_panel {
+    display: flex;
+    margin-bottom: 25px;
+    position: absolute;
+    width: 100%;
+    top: 59px;
+    left: 25px;
+    z-index: 5;
+}
+.vacancy__switch_button {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16.94px;
+}
+.vacancy__table_desktop {
+    width: 100%;
+    border-radius: 10px;
+    border-collapse:collapse;
+	border-spacing:0;
+}
+.vacancy__table_desktop td {
+    padding: 15.5px 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 16.94px;
+}
+.vacancy__table_desktop td:first-child {
+    width: 60px;
+}
+.vacancy__table_desktop td:nth-child(2) {
+    width: 210px;
+}
+.vacancy__table_desktop td:nth-child(3) {
+    width: 141px;
+}
+.vacancy__table_desktop td:nth-child(4) {
+    width: 120px;
+}
+.vacancy__table_desktop td:nth-child(5) {
+    width: 113px;
+}
+.vacancy__table_desktop td:nth-child(6) {
+    width: 471px;
+}
+.vacancy__table_desktop .table__header td {
+    padding: 16.5px 15px;
+}
+.vacancy__table_desktop .table__footer td {
+    padding: 15px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+}
+.vacancy__table_desktop td, .vacancy__table_desktop tr {
+    border: 1px solid #EDEFF5;
+}
+.vacancy__table_desktop a {
+    color: #5898FF;
+}
+.table__header td {
+    color: #9098B4;
+}
+.vacancy__tableflex_mobile {
+    display: none;
 }
 
 @media screen and (max-width: 1170px) {
@@ -186,6 +287,14 @@ body {
     }
     .vavancy__сompilation, .vacancy__contact_cost {
         margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .vacancy__table_desktop {
+        display: none;
+    }
+    .vacancy__tableflex_mobile {
+        display: block;
     }
 }
 @media screen and (max-width: 480px) {
