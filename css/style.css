@@ -194,7 +194,7 @@ body {
     border: none; /* Оформление границ бегунка */
 }
 .vacancy__statistics_view img {
-    width: 1070px;
+    width: 1042px;
     max-width: none;
 }
 .vacancy__statistics_view.view_active {
@@ -214,6 +214,14 @@ body {
 .vacancy__switch_panel {
     display: flex;
     margin-bottom: 25px;
+}
+.result__tab {
+    padding-left: 28px;
+}
+.result__left {
+    position: absolute;
+    top: 71px;
+    left: 23px;
 }
 .vacancy__switch_button {
     display: flex;
@@ -312,6 +320,9 @@ body {
         max-width: 100%;
         transform: rotateX(180deg);
         padding-bottom: 69px;
+    }
+    .result__left {
+        top: 107px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -484,6 +495,10 @@ body {
     .vacancy__statistics_view img {
         position: relative;
         top: 14px;
+    }
+    .result__left {
+        left: 11px;
+        top: 82px;
     }
     .vacancy__statistics_container {
         padding: 13px 0 0 0;
