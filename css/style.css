@@ -172,6 +172,8 @@ body {
   
 .vacancy__statistics_view::-webkit-scrollbar-track {
     background: #F9FAFC; /* Цвет дорожки */
+    border-top: 1px solid #EDEFF5;
+    border-bottom: 1px solid #EDEFF5;
 }
   
 .vacancy__statistics_view::-webkit-scrollbar-thumb {
@@ -296,12 +298,69 @@ body {
     .vacancy__tableflex_mobile {
         display: block;
     }
+    .vacancy__tableflex_mobile .vacancy__box_inner {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #EDEFF5;
+        padding-bottom: 17px;
+        padding-top: 17px;
+    }
+    .vacancy__tableflex_mobile .vacancy__box_inner_a {
+        padding-top: 0;
+    }
+    .vacancy__tableflex_mobile .tableflex__col_left {
+        width: 34%;
+        border-right: 1px solid #EDEFF5;
+        box-sizing: border-box;
+    }
+    .vacancy__tableflex_mobile .tableflex__col_right {
+        width: 60%;
+        box-sizing: border-box;
+    }
+    .vacancy__tableflex_mobile .tableflex__col_full {
+        width: 100%;
+    }
+    .vacancy__tableflex_mobile p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 16.94px;
+    }
+    .vacancy__tableflex_mobile .vacancy__subtitle {
+        margin-bottom: 9px;
+    }
+    .vacancy__link {
+        font-size: 15px;
+        line-height: 18.15px;
+        color: #5898FF;
+    }
+    .vacancy__tableflex_mobile .vacancy__box_inner:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .vacancy__tableflex_mobile .vacancy__box {
+        margin-right: 0;
+        margin-bottom: 7px;
+    }
+    .vacancy__tableflex_mobile .vacancy__box:last-child {
+        margin-bottom: 0;
+    }
+    .vacancy__text_xl, .vacancy__text_sm { 
+        font-size: 20px !important;
+        line-height: 24.2px !important;
+    }
 }
 @media screen and (max-width: 480px) {
     .container {
         max-width: 100%;
         padding: 13px;
         border-radius: 10px;
+    }
+    .vacancy {
+        padding: 13px;
+        border-radius: 0 0 5px 5px;
+    }
+    .vacancy__block {
+        margin-bottom: 37px;
     }
     .vacancy__box {
         padding: 13px;
@@ -310,8 +369,40 @@ body {
         font-size: 20px;
         line-height: 24.2px;
     }
+    .vacancy__box_inner_top {
+        padding-bottom: 17px;
+    }
+    .vacancy__box_inner_bottom {
+        flex-wrap: wrap;
+        padding-top: 17px;
+    }
+    .vacancy__name_top {
+        border-radius: 5px 5px 0 0;
+    }
+    .vacancy__box_inner_bottom .text__box {
+        width: 100%;
+    }
+    .vacancy__box_inner_bottom .text__box:first-child {
+        border-bottom: 1px solid #EDEFF5;
+        padding-bottom: 17px;
+    }
+    .vacancy__box_inner_bottom .text__box:last-child {
+        padding-top: 13px;
+    }
+    .vavancy__response, .vacancy__response_cost {
+        padding-bottom: 17px;
+        margin-bottom: 16px;
+    }
+    .vavancy__сompilation, .vacancy__contact_cost {
+        margin-bottom: 17px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #EDEFF5;
+    }
+    .vacancy__box_a {
+        margin-bottom: 7px;
+    }
     .vacancy__box_b {
-        margin-bottom: 20px;
+        margin-bottom: 7px;
     }
     .vacancy__box_b, .vacancy__box_c {
         width: 100%;
@@ -323,8 +414,105 @@ body {
         padding: 13px;
     }
     .vacancy__text_xl, .vacancy__text_sm { 
-        font-size: 20px;
-        line-height: 24.2px;
+        font-size: 20px !important;
+        line-height: 24.2px !important;
+    }
+    .vacancy__resume {
+        margin-bottom: 17px;
+    }
+    .vacancy__resume_numbers {
+        width: 42px;
+        font-size: 15px;
+        line-height: 18.15px;
+        margin-right: 14px;
+    }
+    .vacancy__resume_text {
+        width: 240px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 15px;
+        line-height: 18.15px;
+        margin-right: 10px;
+    }
+    .vacancy__resume_progress {
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+    .vacancy__resume_line {
+        padding: 15.5px 13px;
+        margin-bottom: 7px;
+    }
+    .vacancy__resume_line:last-child {
+        margin-bottom: 0;
+    }
+    .vacancy__statistics .vacancy__name_top {
+        line-height: 23px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .vacancy__switch_panel {
+        top: 36px;
+        left: 13px;
+    }
+    .vacancy__statistics_view img {
+        position: relative;
+        top: 14px;
+    }
+    .vacancy__statistics_container {
+        padding: 13px 0 0 0;
+    }
+    .vacancy__statistics_view {
+        padding-left: 13px;
+    }
+    .vacancy__statistics {
+        margin-bottom: 17px;
+    }
+    .vacancy__tableflex_mobile .vacancy__box_inner {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #EDEFF5;
+        padding-bottom: 17px;
+        padding-top: 17px;
+    }
+    .vacancy__tableflex_mobile .vacancy__box_inner_a {
+        padding-top: 0;
+    }
+    .vacancy__tableflex_mobile .tableflex__col_left {
+        width: 34%;
+        border-right: 1px solid #EDEFF5;
+        box-sizing: border-box;
+    }
+    .vacancy__tableflex_mobile .tableflex__col_right {
+        width: 60%;
+        box-sizing: border-box;
+    }
+    .vacancy__tableflex_mobile .tableflex__col_full {
+        width: 100%;
+    }
+    .vacancy__tableflex_mobile p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 16.94px;
+    }
+    .vacancy__tableflex_mobile .vacancy__subtitle {
+        margin-bottom: 9px;
+    }
+    .vacancy__link {
+        font-size: 15px;
+        line-height: 18.15px;
+        color: #5898FF;
+    }
+    .vacancy__tableflex_mobile .vacancy__box_inner:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .vacancy__tableflex_mobile .vacancy__box {
+        margin-right: 0;
+        margin-bottom: 7px;
+    }
+    .vacancy__tableflex_mobile .vacancy__box:last-child {
+        margin-bottom: 0;
     }
 }
 @media screen and (max-width: 340px) {
