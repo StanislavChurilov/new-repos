@@ -171,6 +171,7 @@ body {
     overflow-x: auto;
     max-width: 100%;
     transform: rotateX(180deg);
+    height: auto;
 }
 .vacancy__statistics_container {
     position: relative;
@@ -197,7 +198,9 @@ body {
 .vacancy__statistics_view img {
     width: 1042px;
     margin-left: 28px;
+    bottom: 0;
     max-width: none;
+    z-index: 5;
 }
 .vacancy__statistics_view.view_active {
     display: block;
@@ -217,20 +220,49 @@ body {
     display: flex;
     margin-bottom: 25px;
 }
-/* .result__tab {
-    padding-left: 28px;
-} */
 .result__left {
     position: absolute;
-    top: 71px;
-    left: 2px;
+    top: 72px;
+    left: 12px;
     background-color: #fff;
-    z-index: 5;
     width: 40px;
+    text-align: center;
+    z-index: 6;
 }
-.result__left img {
+.vacancy__statistics_dates {
+    transform: rotateX(180deg);
+    width: 1042px;
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    left: 20px;
+   left: 28px;
+   margin-bottom: 10px;
+}
+.vacancy__statistics_dates .date_s {
+    font-size: 11px;
+    color: #9098B4;
+}
+.vacancy__statistics_num {
+    font-size: 12px;
+    line-height: 14.52px;
+    margin-bottom: 17px;
+    position: relative;
+}
+.result__lines {
+    left: 28px;
+    bottom: 10px;
+    position: absolute;
+}
+.result__lines .line {
+    width: 1042px;
+    height: 0;
+    border-bottom: 1px dashed #EDEFF5;
+}
+.result__lines .line {
+    margin-bottom: 30.5px;
+}
+.result__lines .line:last-child {
+    margin-bottom: 0;
 }
 .vacancy__switch_button {
     display: flex;
@@ -332,6 +364,9 @@ body {
     }
     .result__left {
         top: 107px;
+    }
+    .result__lines {
+        bottom: 80px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -506,17 +541,23 @@ body {
         top: 14px;
     }
     .result__left {
-        left: -9px;
-        top: 82px;
+        left: 0;
+        top: 85px;
+    }
+    .vacancy__statistics_dates {
+        margin-bottom: 0;
     }
     .vacancy__statistics_container {
-        padding: 13px 0 0 0;
+        padding: 13px 0 13px 0;
     }
     .vacancy__statistics_view {
         padding-left: 13px;
     }
     .vacancy__statistics {
         margin-bottom: 17px;
+    }
+    .result__lines {
+        bottom: 69px;
     }
     .vacancy__tableflex_mobile .vacancy__box_inner {
         display: flex;
