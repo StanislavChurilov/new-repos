@@ -184,7 +184,7 @@ body {
     position: absolute;
 }
 .vacancy__statistics_view .canvas {
-    min-height: 200px;
+    min-height: 180px;
 }
 .vacancy__statistics_view::-webkit-scrollbar {
     height: 10px;
