@@ -179,6 +179,13 @@ body {
 .vacancy__statistics_view img {
     transform: rotateX(180deg);
 }
+.vacancy__statistics_view svg {
+    transform: rotateX(180deg);
+    position: absolute;
+}
+.vacancy__statistics_view .canvas {
+    min-height: 200px;
+}
 .vacancy__statistics_view::-webkit-scrollbar {
     height: 10px;
     padding-bottom: 100px;
@@ -199,6 +206,18 @@ body {
     width: 1042px;
     margin-left: 28px;
     bottom: 0;
+    max-width: none;
+    z-index: 5;
+}
+.vacancy__statistics_view .graph__bottom {
+    margin-left: 28px;
+    bottom: 80px;
+    max-width: none;
+    z-index: 5;
+}
+.vacancy__statistics_view .graph__top {
+    margin-left: 28px;
+    bottom: 0px;
     max-width: none;
     z-index: 5;
 }
@@ -368,6 +387,15 @@ body {
     .result__lines {
         bottom: 80px;
     }
+    .vacancy__statistics_view .graph__top {
+        bottom: 70px;
+    }
+    .vacancy__statistics_view .graph__bottom {
+        bottom: 150px;
+    }
+    .vacancy__statistics_view .canvas {
+        min-height: 170px;
+    }
 }
 @media screen and (max-width: 768px) {
     .vacancy__table_desktop {
@@ -441,7 +469,7 @@ body {
         margin: 4px 0 17px 0;
     }
     .vacancy__block {
-        margin-bottom: 37px;
+        margin-bottom: 17px;
     }
     .vacancy__box {
         padding: 13px;
@@ -539,6 +567,15 @@ body {
     .vacancy__statistics_view img {
         position: relative;
         top: 14px;
+    }
+    .vacancy__statistics_view .canvas {
+        min-height: 170px;
+    }
+    .vacancy__statistics_view .graph__top {
+        bottom: 60px;
+    }
+    .vacancy__statistics_view .graph__bottom {
+        bottom: 140px;
     }
     .result__left {
         left: 0;
