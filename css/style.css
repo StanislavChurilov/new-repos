@@ -104,6 +104,9 @@ body {
     height: 40px;
     border-radius: 5px;
     margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 16.94px;
+    font-weight: 400;
 }
 .cabinet__popup_image {
     margin-top: 40px;
@@ -205,6 +208,61 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+}
+.flex__box_email_templates {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cabinet__popup.cabinet__popup_fullsize {
+    max-width: 843px;
+    width: 100%;
+}
+.flex__box_email_templates .cabinet__column {
+    flex-direction: column;
+}
+.cabinet__column textarea {
+    resize: none;
+    background-color: #F4F6F8;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16.94px;
+    font-weight: 400;
+    min-height: 228px;
+    border: 1px solid transparent;
+}
+.cabinet__column textarea:focus {
+    border: 1px solid #5898FF;
+    outline: none;
+}
+.cabinet__column .field, .cabinet__column textarea {
+    width: 504px;
+}
+.variables__email {
+    display: flex;
+    flex-direction: column;
+}
+.variable {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.variable:last-child {
+    margin-bottom: 0;
+}
+.cabinet__popup_email .cabinet__popup__cancel {
+    margin-left: 0;
+    margin-right: auto;
+}
+.cabinet__popup_email .cabinet__column_right {
+    width: calc(100% - 554px);
+}
+.cabinet__popup_email .cabinet__popup__title {
+    margin-bottom: 40px;
+}
+.cabinet__popup_email .cabinet__column_right .cabinet__popup__title {
+    margin-bottom: 25px;
 }
 .add__vacancy {
     cursor: pointer;

@@ -442,9 +442,75 @@
 				</div>	
 			</div>
 
+			<div class="cabinet__popup cabinet__popup_template_delete">
+				<p class="cabinet__popup__title">Удаление шаблона</p>
+				<p class="cabinet__popup__subtitle">Вы действительно хотите удалить шаблон “Приглашение” ?</p>
+				
+				<div class="cabinet__popup_buttons buttons__fullspace">
+					<div class="button__c default__button default__button_error">Удалить</div>
+					<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+				</div>	
+			</div>
+
 			<div class="cabinet__popup cabinet__popup_password_save">
 				<p class="cabinet__popup__title">Изменение пароля</p>
 				<p class="cabinet__popup__subtitle">Ваш пароль успешно изменен!</p>
+			</div>
+
+			<div class="cabinet__popup cabinet__popup_fullsize cabinet__popup_email cabinet__popup_newtemplate_email">
+				<p class="cabinet__popup__title">Новый шаблон</p>
+				<div class="flex__box_email_templates">
+					<div class="cabinet__column cabinet__column_left">
+						<div class="field__box">
+							<input type="text" class="field" placeholder="Назовите ваш шаблон" value="">
+							<textarea placeholder="Структура письма" name="" id=""></textarea>
+						</div>
+					</div>
+					<div class="cabinet__column cabinet__column_right">
+						<p class="cabinet__popup__title">Вставить переменную</p>
+						<div class="variables__email">
+							<span class="variable var__name cabinet__link">Имя соискателя</span>
+							<span class="variable var__name cabinet__link">Название вакансии</span>
+							<span class="variable var__name cabinet__link">Телефон вакансии</span>
+							<span class="variable var__name cabinet__link">Почта вакансии</span>
+							<span class="variable var__name cabinet__link">Мое имя</span>
+							<span class="variable var__name cabinet__link">Компания</span>
+						</div>
+					</div>
+				</div>
+				<div class="cabinet__popup_buttons buttons__fullspace">
+					<div class="button__c fill__button">Сохранить</div>
+					<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+				</div>	
+				
+			</div>
+			<div class="cabinet__popup cabinet__popup_fullsize cabinet__popup_email cabinet__popup_edittemplate_email">
+				<p class="cabinet__popup__title">Редактирование шаблона</p>
+				<div class="flex__box_email_templates">
+					<div class="cabinet__column cabinet__column_left">
+						<div class="field__box">
+							<input type="text" class="field" value="Приглашение" placeholder="Назовите ваш шаблон">
+							<textarea name="" id="">Здравствуйте, {Имя соискателя}! Благодарим Вас за отклик на вакансию "{Название вакансии}". Ваше резюме показалось нам очень интересным. Мы хотели бы пригласить Вас на интервью. Перезвоните, пожалуйста, в рабочее время по телефону {Телефон вакансии} ({Мое Имя})</textarea>
+						</div>
+					</div>
+					<div class="cabinet__column cabinet__column_right">
+						<p class="cabinet__popup__title">Вставить переменную</p>
+						<div class="variables__email">
+							<span class="variable var__name cabinet__link">Имя соискателя</span>
+							<span class="variable var__name cabinet__link">Название вакансии</span>
+							<span class="variable var__name cabinet__link">Телефон вакансии</span>
+							<span class="variable var__name cabinet__link">Почта вакансии</span>
+							<span class="variable var__name cabinet__link">Мое имя</span>
+							<span class="variable var__name cabinet__link">Компания</span>
+						</div>
+					</div>
+				</div>
+				<div class="cabinet__popup_buttons buttons__fullspace">
+					<div class="button__c fill__button">Сохранить</div>
+					<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+					<div class="button__c default__button default__button_error show__popup" data-popup="delete__template">Удалить шаблон</div>
+				</div>	
+				
 			</div>
 
 			<div class="container">
@@ -779,14 +845,14 @@
 					</div>
 
 					<div class="cabinet__tab cabinet__tab_email_templates">
-						<div class="cabinet__inner_tab_button show__popup"><span class="plus">+</span> Добавить новый</div>
+						<div class="cabinet__inner_tab_button show__popup" data-popup="newtemplate_email"><span class="plus">+</span> Добавить новый</div>
 						<div class="cabinet__block cabinet__block_email_templates">
 							<div class="cabinet cabinet__name_top">Шаблоны писем</div>
 							<div class="cabinet cabinet__container">
-								<div class="email__templates_box"><p class="cabinet__text_bold">Подумать</p> <span class="cabinet__link edit__email_template">Редактировать</span></div>
-								<div class="email__templates_box"><p class="cabinet__text_bold">Приглашение на собеседование</p> <span class="cabinet__link edit__email_template">Редактировать</span></div>
-								<div class="email__templates_box"><p class="cabinet__text_bold">Приглашение на собеседование (без отклика)</p> <span class="cabinet__link edit__email_template">Редактировать</span></div>
-								<div class="email__templates_box"><p class="cabinet__text_bold">Отказ</p> <span class="cabinet__link edit__email_template">Редактировать</span></div>
+								<div class="email__templates_box"><p class="cabinet__text_bold">Подумать</p> <span class="cabinet__link edit__email_template show__popup" data-popup="edittemplate_email">Редактировать</span></div>
+								<div class="email__templates_box"><p class="cabinet__text_bold">Приглашение на собеседование</p> <span class="cabinet__link edit__email_template show__popup" data-popup="edittemplate_email">Редактировать</span></div>
+								<div class="email__templates_box"><p class="cabinet__text_bold">Приглашение на собеседование (без отклика)</p> <span class="cabinet__link edit__email_template show__popup" data-popup="edittemplate_email">Редактировать</span></div>
+								<div class="email__templates_box"><p class="cabinet__text_bold">Отказ</p> <span class="cabinet__link edit__email_template show__popup" data-popup="edittemplate_email">Редактировать</span></div>
 							</div>
 						</div>
 

@@ -41,6 +41,16 @@ $(document).ready(function () {
         if($(this).data('popup') == 'crm__potok') {
             $('.cabinet__popup_crm_potok').show();
         }
+        if($(this).data('popup') == 'newtemplate_email') {
+            $('.cabinet__popup_newtemplate_email').show();
+        }
+        if($(this).data('popup') == 'edittemplate_email') {
+            $('.cabinet__popup_edittemplate_email').show();
+        }
+        if($(this).data('popup') == 'delete__template') {
+            $('.cabinet__popup').hide();
+            $('.cabinet__popup_template_delete').show();
+        }
         $('.overlay').show();
         $('.close__popup').show();  
     });
