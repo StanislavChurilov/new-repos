@@ -1298,6 +1298,9 @@ p {
     .cabinet__block:last-child {
         margin-bottom: 0;
     }
+    .cabinet__popup_profile_edit .cabinet__popup_fields {
+        margin-top: 15px;
+    }
 }
 
 /* Основные стили конец */
