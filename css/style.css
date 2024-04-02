@@ -142,6 +142,7 @@ body {
     height: 150px;
     margin: 0 auto;
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 .cabinet__popup_image .file__image {
     opacity: 0;
@@ -199,6 +200,20 @@ body {
     line-height: 17.94px;
     align-items: flex-start;
 }
+.check:checked+label {
+    color: #2F353D;
+    background-color: #ffffff;
+}
+.check:hover+label::before {
+    border-color: #adb5bd;
+    background: none;
+    background-color: #ffffff;
+}
+.check:checked+label::before {
+    border-color: #5898FF;
+    background: url('../img/check.svg') center center no-repeat;
+    background-color: #5898FF;
+}
 .check_main + label {
     display: flex;
     align-items: center;
@@ -218,12 +233,14 @@ body {
     height: 20px;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 1px solid #adb5bd;
     border-radius: 4px;
     margin-right: 10px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
+    background-color: #EDEFF5;
+    border: none;
+    
 }
 .cabinet__popup_buttons .button__c {
     margin: 0;
@@ -319,7 +336,7 @@ body {
     height: 20px;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 1px solid #adb5bd;
+    border: 1px solid #2F353D;
     outline:2px solid #fff;
     outline-offset:-3px;
     border-radius: 50%;
@@ -595,6 +612,10 @@ p {
     line-height: 16.94px;
     margin-bottom: 10px;
 }
+.cabinet__popup_manager_edit .field__name_popup, .cabinet__popup_manager_add .field__name_popup {
+    font-size: 15px;
+    line-height: 18.15px;
+}
 .field__box_check {
     margin-bottom: 15px;
     font-size: 14px;
@@ -754,6 +775,7 @@ p {
     justify-content: center;
     margin-left: auto;
     margin-right: 0;
+    border-radius: 5px;
 }
 .manager__nav {
     position: absolute;
@@ -1158,7 +1180,7 @@ p {
         line-height: 16.94px;
     }
     .default__button {
-        width: 100%;
+        width: auto;
         text-align: center;
     }
     .switch__box {
@@ -1264,10 +1286,10 @@ p {
     .cabinet__block_managers .cabinet__container {
         padding: 17px;
     }
-    .cabinet__title {
+    /* .cabinet__title {
         font-size: 18px;
         line-height: 21.78px;
-    }
+    } */
     .cabinet__block_managers .cabinet__title {
         margin-top: 25px;
     }
@@ -1322,12 +1344,17 @@ p {
     .cabinet__text_bold {
         width: 100%;
         margin-bottom: 13px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.78px;
+    }
+    .cabinet__block_email_templates .cabinet__text_bold {
         font-size: 20px;
         line-height: 24.2px;
     }
     .cabinet__container {
         padding: 13px 13px 17px 13px;
-        border-radius: 5px;
+        border-radius: 0;
     }
     .cabinet__block_email_templates {
         padding-bottom: 13px;

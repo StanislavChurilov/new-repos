@@ -54,7 +54,7 @@
 
 					<div class="cabinet__popup_buttons">
 						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 					</div>
 					
 				</form>
@@ -110,7 +110,7 @@
 
 					<div class="cabinet__popup_buttons">
 						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 					</div>
 					
 					<!-- <div class="droplist droplist__select droplist_active">
@@ -215,7 +215,7 @@
 
 					<div class="cabinet__popup_buttons">
 						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 					</div>
 					
 				</form>
@@ -293,7 +293,7 @@
 
 					<div class="cabinet__popup_buttons">
 						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 					</div>
 					
 				</form>
@@ -369,7 +369,7 @@
 
 					<div class="cabinet__popup_buttons">
 						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 					</div>
 					
 				</form>
@@ -425,7 +425,7 @@
 
 					<div class="cabinet__popup_buttons buttons__fullspace">
 						<div class="button__c default__button default__button_error">Отключить</div>
-						<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 					</div>
 					
 				</form>
@@ -438,7 +438,7 @@
 				
 				<div class="cabinet__popup_buttons buttons__fullspace">
 					<div class="button__c default__button default__button_error">Удалить</div>
-					<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+					<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 				</div>	
 			</div>
 
@@ -448,7 +448,7 @@
 				
 				<div class="cabinet__popup_buttons buttons__fullspace">
 					<div class="button__c default__button default__button_error">Удалить</div>
-					<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+					<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 				</div>	
 			</div>
 
@@ -480,7 +480,7 @@
 				</div>
 				<div class="cabinet__popup_buttons buttons__fullspace">
 					<div class="button__c fill__button">Сохранить</div>
-					<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+					<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 				</div>	
 				
 			</div>
@@ -507,7 +507,7 @@
 				</div>
 				<div class="cabinet__popup_buttons buttons__fullspace">
 					<div class="button__c fill__button">Сохранить</div>
-					<div class="button__c default__button cabinet__popup__cancel">Отмена</div>
+					<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
 					<div class="button__c default__button default__button_error show__popup" data-popup="delete__template">Удалить шаблон</div>
 				</div>	
 				
@@ -705,9 +705,12 @@
 						<div class="cabinet__inner_tab_button show__popup" data-popup="new__manager">Новый менджер</div>
 						<div class="cabinet__block cabinet__block_managers">
 							<div class="cabinet cabinet__name_top">Ваши менеджеры</div>
-							<div class="cabinet cabinet__container">
+
+							<!-- Добавить при отстутствии блоков менеджеров -->
+							<!-- <div class="cabinet cabinet__container">
 								<div class="button__c fill__button show__popup" data-popup="new__manager">Добавить менеджера</div>
-							</div>
+							</div> -->
+
 							<div class="cabinet cabinet__container">
 								<div class="manager">
 									<div class="cabinet__box cabinet__box_image"><img src="img/manager-nophoto.png" alt=""></div>
@@ -775,7 +778,7 @@
 					</div>
 
 					<div class="cabinet__tab cabinet__tab_personal_account">
-						<div class="cabinet__inner_tab_button show__popup">Выставить счет</div>
+						<div class="cabinet__inner_tab_button">Выставить счет</div>
 						<div class="cabinet__block cabinet__block_package">
 							<div class="cabinet cabinet__name_top">Пакет размещения</div>
 							<div class="cabinet cabinet__container">
