@@ -52,6 +52,20 @@ body {
     overflow: auto;
     max-height: 90%;
 }
+.cabinet__popup_template_delete {
+    max-width: 458px;
+}
+.cabinet__popup_password_save {
+    max-width: 367px;
+    width: 100%;
+}
+.cabinet__popup_manager_delete {
+    max-width: 451px;
+    width: 100%;
+}
+.cabinet__popup .cabinet__popup__title {
+    color: #2F353D;
+}
 .cabinet__popup::-webkit-scrollbar {
     width: 5px;               /* ширина scrollbar */
 }
@@ -78,6 +92,13 @@ body {
 .cabinet__popup_fields {
     margin-bottom: 40px;
     margin-top: 40px;
+}
+.cabinet__popup_profile_edit .cabinet__popup_fields {
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+.cabinet__popup_profile_edit .field__box {
+    margin-bottom: 15px;
 }
 .cabinet__popup_checks {
     margin-bottom: 40px;
@@ -107,6 +128,9 @@ body {
     font-size: 14px;
     line-height: 16.94px;
     font-weight: 400;
+}
+.cabinet__popup_newtemplate_email .field {
+    margin-bottom: 15px;
 }
 .cabinet__popup_image {
     margin-top: 40px;
@@ -163,6 +187,9 @@ body {
 .field:focus {
     background-color: #EFF5FF;
     outline: 1px solid #5898FF;
+}
+.field:focus::placeholder {
+    color: transparent;
 }
 .check_main {
     display: none;
@@ -245,7 +272,7 @@ body {
 }
 .variable {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
     cursor: pointer;
 }
 .variable:last-child {
@@ -261,8 +288,12 @@ body {
 .cabinet__popup_email .cabinet__popup__title {
     margin-bottom: 40px;
 }
-.cabinet__popup_email .cabinet__column_right .cabinet__popup__title {
+.cabinet__popup_fullsize .cabinet__column_right .cabinet__popup__title {
     margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 21.78px;
+    font-weight: 500;
+
 }
 .add__vacancy {
     cursor: pointer;
@@ -412,6 +443,10 @@ body {
     background-color: #EFF5FF;
     color: #5898FF;
 }
+.default__button_active {
+    background-color: #EFF5FF;
+    color: #5898FF;
+}
 .default__button_enabled {
     background-color: #E4FDE4;
     color: #04B600;
@@ -546,6 +581,9 @@ p {
 .field__box {
     width: 100%;
     margin-bottom: 20px;
+}
+.cabinet__popup_fullsize .field__box {
+    margin-bottom: 0;
 }
 .field__name {
     margin-bottom: 15px;
