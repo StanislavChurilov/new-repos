@@ -93,6 +93,10 @@ body {
     margin-bottom: 40px;
     margin-top: 40px;
 }
+.cabinet__popup_crm_bitrix .cabinet__popup_fields {
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
 .cabinet__popup_profile_edit .cabinet__popup_fields {
     margin-bottom: 40px;
     margin-top: 15px;
@@ -282,6 +286,9 @@ body {
 }
 .cabinet__column .field, .cabinet__column textarea {
     width: 504px;
+}
+textarea.background__blue {
+    background-color: #EFF5FF;
 }
 .variables__email {
     display: flex;
@@ -862,7 +869,7 @@ p {
     margin-bottom: 15px;
     padding: 25px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .crm__box .button__c {
     margin-top: auto;
@@ -909,6 +916,20 @@ p {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
+}
+.mob__only {
+    display: none;
+    background-color: transparent;
+    font-size: 20px;
+    line-height: 24.2px;
+}
+.mob__close_nav {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: url("../img/mob-close-nav.svg") center center no-repeat;
+    cursor: pointer;
+    background-color: transparent !important;
 }
 
 @media screen and (max-width: 1170px) {
@@ -1029,6 +1050,50 @@ p {
     }
 }
 @media screen and (max-width: 480px) {
+    .manager__nav {
+        right: -17px;
+        top: 1000px;
+        background-color: #2F353D;
+        color: #fff;
+        max-width: 93vw;
+        width: 93vw;
+        padding: 25px 13px 13px 13px;
+        box-sizing: border-box;
+        border-radius: 25px 25px 0px 0px;
+        opacity: 1;
+        z-index: 50;
+    }
+    .manager__nav li {
+        background-color: rgba(255, 255, 255, 0.25);
+        color: #fff;
+        border: none;
+        margin-bottom: 1px;
+    }
+    .manager__nav li.mob__only {
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24.2px;
+        margin-bottom: 26px;
+    }
+    .manager__nav li:nth-child(2) {
+        border-radius: 5px 5px 0px 0px;
+    }
+    .manager__nav li.mob__only .mob__close_nav {
+        position: relative;
+        z-index: 99;
+    }
+    .manager__nav_button:hover .manager__nav {
+        right: -17px;
+        top: 1000px;
+    }
+    .manager__nav_button.active .manager__nav {
+        top: 50px;
+    }
+    .mob__only {
+        display: flex;
+        justify-content: space-between;
+    }
     .container {
         max-width: 100%;
         padding: 13px;
@@ -1238,6 +1303,7 @@ p {
         position: absolute;
         right: 0;
         top: 0;
+        background-color: transparent;
     }
     .cabinet__block_managers .cabinet__box_info {
         width: 100%;
@@ -1326,6 +1392,7 @@ p {
     }
     .crm__box {
         padding: 13px;
+        border-radius: 5px;
     }
     .cabinet__block_email_templates .cabinet__container {
         background-color: #F4F6F8;
@@ -1365,6 +1432,9 @@ p {
     }
     .cabinet__popup_profile_edit .cabinet__popup_fields {
         margin-top: 15px;
+    }
+    .cabinet__tab_managers_empty .cabinet__inner_tab_button {
+        display: none;
     }
 }
 
