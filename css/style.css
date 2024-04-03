@@ -805,6 +805,7 @@ p {
     margin-left: auto;
     margin-right: 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 .manager__nav {
     position: absolute;
@@ -821,7 +822,7 @@ p {
     opacity: 1;
 }
 .manager__nav li {
-    padding: 10px;
+    padding: 11px 15px;
     box-sizing: border-box;
     color: #9098B4;
     list-style: none;
@@ -829,13 +830,13 @@ p {
     cursor: pointer;
     background-color: #fff;
     box-shadow: 0px 0 7px rgba(42, 49, 55, 0.1);
-    font-size: 14px;
-    line-height: 16.94px;
+    font-size: 15px;
+    line-height: 18.15px;
 }
 .manager__nav li:hover {
     color: #2F353D;
 }
-.manager__nav li:first-child {
+.manager__nav li:nth-child(2) {
     border-bottom: none;
     border-radius: 5px 5px 0 0;
 }
