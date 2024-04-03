@@ -959,12 +959,12 @@ p {
     cursor: pointer;
     background-color: transparent !important;
 }
-.cabinet__block_package .cabinet__container {
+.cabinet__block_package_empty .cabinet__container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.cabinet__block_package .cabinet__image {
+.cabinet__block_package_empty .cabinet__image {
     width: 80px;
     height: 80px;
     background: url("../img/star.png") 0 0 no-repeat;
@@ -978,7 +978,7 @@ p {
     margin-bottom: 10px;
     text-align: center;
 }
-.cabinet__block_package .cabinet__subtitle {
+.cabinet__block_package_empty .cabinet__subtitle {
     max-width: 100%;
     width: 301px;
     white-space: wrap;
