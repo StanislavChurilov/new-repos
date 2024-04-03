@@ -1389,6 +1389,15 @@ p {
         top: 17px;
         background-color: transparent;
     }
+    .manager__nav_button:hover {
+        background-color: transparent;
+    }
+    .manager__nav_button:hover svg rect {
+        fill: #9098B4;
+    }
+    .manager__nav_button.active svg rect {
+        fill: #5898FF;
+    }
     .cabinet__block_managers .cabinet__box_info {
         width: 100%;
     }
@@ -1436,10 +1445,6 @@ p {
     .cabinet__block_managers .cabinet__container {
         padding: 17px;
     }
-    /* .cabinet__title {
-        font-size: 18px;
-        line-height: 21.78px;
-    } */
     .cabinet__block_managers .cabinet__title {
         margin-top: 25px;
     }
