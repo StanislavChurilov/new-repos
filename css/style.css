@@ -414,6 +414,9 @@ body {
     padding: 25px;
     box-sizing: border-box;
 }
+.cabinet__block_package_empty .cabinet {
+    border-radius: 10px;
+}
 .cabinet__inner_tab_button {
     font-family: 'Inter';
     background-color: #5898FF;
