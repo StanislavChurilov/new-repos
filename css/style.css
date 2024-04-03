@@ -284,6 +284,9 @@ body {
     border: 1px solid #5898FF;
     outline: none;
 }
+.cabinet__column textarea:focus::placeholder {
+    color: transparent;
+}
 .cabinet__column .field, .cabinet__column textarea {
     width: 504px;
 }
