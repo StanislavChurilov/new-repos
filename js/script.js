@@ -140,6 +140,7 @@ $(document).ready(function () {
         $(this).hide();
         $('.close__popup').hide();
         $('.cabinet__popup').hide();
+        $('.manager__nav_button').removeClass('active');
     });
     $('.show__popup').click(function () {
         

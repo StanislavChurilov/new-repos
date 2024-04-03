@@ -13,6 +13,9 @@ body {
 .cabinet__settings * {
     font-family: 'Inter';
 }
+.cabinet__settings .container {
+    overflow: hidden;
+}
 .cabinet__settings {
     position: relative;
 }
@@ -300,9 +303,6 @@ body {
 .cabinet__column .field, .cabinet__column textarea {
     width: 504px;
 }
-/* textarea.background__blue {
-    background-color: #EFF5FF;
-} */
 .variables__email {
     display: flex;
     flex-direction: column;
@@ -331,7 +331,6 @@ body {
     line-height: 21.78px;
     font-weight: 500;
     color: #2F353D;
-
 }
 .add__vacancy {
     cursor: pointer;
@@ -366,9 +365,6 @@ body {
     background-position: center center;
     background-size: 50% 50%;
 }
-/* .radio_main:checked ~ p {
-    color: #5898FF;
-} */
 .fbr__link_hover {
     display: block;
 }
@@ -807,15 +803,33 @@ p {
     border-radius: 5px;
     cursor: pointer;
 }
+.cabinet__block_managers {
+    overflow: visible;
+}
+.manager__nav_container {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 40px;
+    z-index: 50;
+}
 .manager__nav {
     position: absolute;
     right: -400%;
     opacity: 0;
-    top: 40px;
-    padding-top: 10px;
+    top: 10px;
+    padding-top: 0;
     padding-left: 0;
+    border-radius: 5px;
     margin: 0;
     transition: all .2s linear;
+    box-shadow: 0px 0 7px rgba(42, 49, 55, 0.1);
+}
+.manager__nav_button:hover {
+    background-color: #EFF5FF;
+}
+.manager__nav_button:hover svg rect {
+    fill: #5898FF;
 }
 .manager__nav_button:hover .manager__nav {
     right: 0;
@@ -829,20 +843,11 @@ p {
     border-bottom: 1px solid #EDEFF5;
     cursor: pointer;
     background-color: #fff;
-    box-shadow: 0px 0 7px rgba(42, 49, 55, 0.1);
     font-size: 15px;
     line-height: 18.15px;
 }
 .manager__nav li:hover {
     color: #2F353D;
-}
-.manager__nav li:nth-child(2) {
-    border-bottom: none;
-    border-radius: 5px 5px 0 0;
-}
-.manager__nav li:last-child {
-    border-bottom: none;
-    border-radius: 0 0 5px 5px;
 }
 .cabinet__tab_personal_account .cabinet__text {
     display: inline-block;
@@ -953,6 +958,39 @@ p {
     background: url("../img/mob-close-nav.svg") center center no-repeat;
     cursor: pointer;
     background-color: transparent !important;
+}
+.cabinet__block_package .cabinet__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cabinet__block_package .cabinet__image {
+    width: 80px;
+    height: 80px;
+    background: url("../img/star.png") 0 0 no-repeat;
+    margin: 25px 0;
+}
+.title__big_center {
+    font-size: 25px;
+    font-weight: 600;
+    color: #2F353D;
+    line-height: 30.26px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.cabinet__block_package .cabinet__subtitle {
+    max-width: 100%;
+    width: 301px;
+    white-space: wrap;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.fill__button_gradient {
+    background: rgb(151,71,255);
+    background: linear-gradient(90deg, rgba(151,71,255,1) 0%, rgba(88,152,255,1) 100%);
+    margin: 0;
+    width: 175px;
+    text-align: center;
 }
 
 @media screen and (max-width: 1170px) {
@@ -1481,6 +1519,31 @@ p {
     }
     .cabinet__tab_managers_empty .cabinet__inner_tab_button {
         display: none;
+    }
+    .manager__nav_container {
+        position: static;
+        height: 0;
+        width: 0;
+    }
+    .cabinet__tab_personal_account .cabinet__block_package_empty {
+        padding-bottom: 0;
+    }
+    .cabinet__tab_personal_account .cabinet__block_package_empty .cabinet__container {
+        background-color: #fff;
+    }
+    .cabinet__block:last-child {
+        margin-bottom: 0;
+    }
+    .cabinet__block_package .cabinet__image {
+        margin-top: 0;
+    }
+    .cabinet__tab_personal_account .cabinet__block_package_empty .cabinet__container {
+        padding: 17px;
+        width: 100%;
+        margin: 0;
+    }
+    .fill__button_gradient {
+        width: 100%;
     }
 }
 
