@@ -117,6 +117,7 @@ body {
     font-size: 15px;
     font-weight: 400;
     line-height: 18.15px;
+    color: #2F353D;
 }
 .field {
     display: block;
@@ -201,8 +202,16 @@ body {
 }
 .check + label {
     font-size: 14px;
-    line-height: 17.94px;
+    line-height: 16.94px;
     align-items: flex-start;
+    color: #2F353D;
+}
+.cabinet__popup_manager_edit .check + label {
+    line-height: 20.94px;
+}
+.check + label::before {
+    background-color: #EDEFF5;
+    border: none;
 }
 .check:checked+label {
     color: #2F353D;
@@ -211,7 +220,7 @@ body {
 .check:hover+label::before {
     border-color: #adb5bd;
     background: none;
-    background-color: #ffffff;
+    background-color: #EDEFF5;
 }
 .check:checked+label::before {
     border-color: #5898FF;
@@ -283,6 +292,7 @@ body {
 .cabinet__column textarea:focus {
     border: 1px solid #5898FF;
     outline: none;
+    background-color: #EFF5FF;
 }
 .cabinet__column textarea:focus::placeholder {
     color: transparent;
@@ -290,9 +300,9 @@ body {
 .cabinet__column .field, .cabinet__column textarea {
     width: 504px;
 }
-textarea.background__blue {
+/* textarea.background__blue {
     background-color: #EFF5FF;
-}
+} */
 .variables__email {
     display: flex;
     flex-direction: column;
@@ -320,6 +330,7 @@ textarea.background__blue {
     font-size: 18px;
     line-height: 21.78px;
     font-weight: 500;
+    color: #2F353D;
 
 }
 .add__vacancy {
@@ -627,10 +638,12 @@ p {
     font-size: 14px;
     line-height: 16.94px;
     margin-bottom: 10px;
+    color: #2F353D;
 }
 .cabinet__popup_manager_edit .field__name_popup, .cabinet__popup_manager_add .field__name_popup {
     font-size: 15px;
     line-height: 18.15px;
+    color: #2F353D;
 }
 .field__box_check {
     margin-bottom: 15px;
@@ -1060,17 +1073,19 @@ p {
 }
 @media screen and (max-width: 480px) {
     .manager__nav {
-        right: -17px;
-        top: 1000px;
+        right: 0;
+        bottom: -1000px;
+        top: auto;
         background-color: #2F353D;
         color: #fff;
-        max-width: 93vw;
-        width: 93vw;
+        max-width: 100%;
+        width: 100%;
         padding: 25px 13px 13px 13px;
         box-sizing: border-box;
         border-radius: 25px 25px 0px 0px;
         opacity: 1;
         z-index: 50;
+        position: fixed;
     }
     .manager__nav li {
         background-color: rgba(255, 255, 255, 0.25);
@@ -1093,11 +1108,11 @@ p {
         z-index: 99;
     }
     .manager__nav_button:hover .manager__nav {
-        right: -17px;
-        top: 1000px;
+        right: 0;
+        bottom: -1000px;
     }
     .manager__nav_button.active .manager__nav {
-        top: 50px;
+        bottom: 0px;
     }
     .mob__only {
         display: flex;
@@ -1199,6 +1214,23 @@ p {
     .cabinet__name_top {
         padding: 17px;
     }
+    .cabinet__tab_managers_full .cabinet__name_top {
+        display: none;
+    }
+    .cabinet__tab_managers_full .cabinet__block_managers .cabinet__container {
+        background-color: transparent;
+        padding: 0;
+    }
+    .cabinet__tab_managers_full .cabinet__block_managers .manager {
+        border-radius: 5px;
+        border-bottom: none;
+        margin-bottom: 13px;
+        padding: 17px;
+        background-color: #fff;
+    }
+    .cabinet__tab_managers_full .cabinet__block_managers .manager:last-child {
+        margin-bottom: 0;
+    }
     .cabinet__container {
         padding: 8px 17px 17px 17px;
     }
@@ -1263,6 +1295,10 @@ p {
     .switch__button {
         margin-right: 13px;
     }
+    .check + label::before {
+        background-color: #EDEFF5;
+        border: none;
+    }
     .check_main + label::before {
         background-color: #EDEFF5;
         border: none;
@@ -1310,8 +1346,8 @@ p {
     }
     .manager__nav_button {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 17px;
+        top: 17px;
         background-color: transparent;
     }
     .cabinet__block_managers .cabinet__box_info {

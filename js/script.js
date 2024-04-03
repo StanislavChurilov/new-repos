@@ -203,30 +203,14 @@ $(document).ready(function () {
     if($(window).width() <= 480) {
         $('.manager__nav_button svg').click(function (e) { 
                 $(this).parent('.manager__nav_button').addClass('active');
+                $('.overlay').show();
         });
         $('.mob__close_nav').click(function (e) {
-            $(this).closest('.manager__nav_button').removeClass('active'); 
+            $(this).closest('.manager__nav_button').removeClass('active');
+            $('.overlay').hide();
         });
     }
 
-    $('.cabinet__popup_textarea').click(function (e) { 
-        if($(this).val().length > 0) {
-            $(this).addClass('background__blue');
-        }
-        else {
-            $(this).removeClass('background__blue');
-        }
-    });
-
-    $('.cabinet__popup_textarea').keyup(function (e) { 
-        if($(this).val().length > 0) {
-            $(this).addClass('background__blue');
-        }
-        else {
-            $(this).removeClass('background__blue');
-        }
-        
-    });
     
     dropL();
     
