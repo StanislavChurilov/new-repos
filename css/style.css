@@ -352,7 +352,13 @@ textarea.background__blue {
     background-position: center center;
     background-size: 50% 50%;
 }
-.radio_main:checked ~ p {
+/* .radio_main:checked ~ p {
+    color: #5898FF;
+} */
+.fbr__link_hover {
+    display: block;
+}
+.fbr__link_hover:hover {
     color: #5898FF;
 }
 .cabinet__tabs_panel {
