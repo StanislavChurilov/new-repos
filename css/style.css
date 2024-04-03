@@ -1069,16 +1069,16 @@ p {
         overflow: auto;
     }
     .variables__email::-webkit-scrollbar {
-        width: 0px;               /* ширина scrollbar */
+        width: 0px;
         height: 0;
     }
     .variables__email::-webkit-scrollbar-track {
-        background: #ffffff;        /* цвет дорожки */
+        background: #ffffff;
     }
     .variables__email::-webkit-scrollbar-thumb {
-        background-color: #9098B4;    /* цвет плашки */
-        border-radius: 0px;       /* закругления плашки */
-        border: none;  /* padding вокруг плашки */
+        background-color: #9098B4;
+        border-radius: 0px;
+        border: none;
     }
     .cabinet__link.variable {
         margin-bottom: 0;
