@@ -137,6 +137,12 @@ body {
     line-height: 16.94px;
     font-weight: 400;
 }
+.field::placeholder {
+    color: #9098B4;
+}
+.cabinet__popup_textarea::placeholder {
+    color: #9098B4;
+}
 .cabinet__popup_newtemplate_email .field {
     margin-bottom: 15px;
 }
@@ -209,7 +215,7 @@ body {
     align-items: flex-start;
     color: #2F353D;
 }
-.cabinet__popup_manager_edit .check + label {
+.cabinet__popup_crm_bitrix .check + label {
     line-height: 20.94px;
 }
 .check + label::before {
@@ -849,8 +855,15 @@ p {
     font-size: 15px;
     line-height: 18.15px;
 }
+.manager__nav li:nth-child(2) {
+    border-radius: 5px 5px 0px 0px;
+}
+.manager__nav li:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
 .manager__nav li:hover {
-    color: #2F353D;
+    color: #5898FF;
+    background-color: #EFF5FF;
 }
 .cabinet__tab_personal_account .cabinet__text {
     display: inline-block;
@@ -1526,6 +1539,9 @@ p {
         margin-top: 15px;
     }
     .cabinet__tab_managers_empty .cabinet__inner_tab_button {
+        display: none;
+    }
+    .cabinet__tab_package_empty .cabinet__inner_tab_button {
         display: none;
     }
     .manager__nav_container {

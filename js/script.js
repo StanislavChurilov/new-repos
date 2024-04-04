@@ -143,6 +143,7 @@ $(document).ready(function () {
         $('.manager__nav_button').removeClass('active');
     });
     $('.show__popup').click(function () {
+        $('.manager__nav_button').removeClass('active');
         
         if($(this).data('popup') == 'new__manager') {
             $('.cabinet__popup_manager_add').show();
