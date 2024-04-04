@@ -23,7 +23,7 @@ $(document).ready(function () {
        if($(this).closest('.droplist').hasClass('droplist__check')) {
 
         $(this).closest('.droplist').find('.droplist__result').addClass();
-        let currentValChecked = $(this).closest('.droplist').find('.check:checked').map(function () {
+        let currentValChecked = $('.droplist__check .check:checked').map(function () {
             return $(this).val();
         }).get().join(', ');
         $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentValChecked);
@@ -55,9 +55,8 @@ $(document).ready(function () {
     });
 
     $('.droplist__field').keyup(function () {
-
-        let currentFromVal = $(this).closest('.droplist').find('.droplist__field_from').val();
-        let currentToVal = $(this).closest('.droplist').find('.droplist__field_to').val();
+        let currentFromVal = $('.droplist__field_from').val();
+        let currentToVal = $('.droplist__field_to').val();
         let fromValResult = 'от ' + currentFromVal.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         let toValResult = ' до ' + currentToVal.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         $(this).closest('.droplist').find('.droplist__result').show();
@@ -75,8 +74,7 @@ $(document).ready(function () {
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult + toValResult);
         }
         if($('.droplist__field').val() == '') {
-            $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
-            $(this).closest('.droplist').find('.droplist__result_text').text('Заработная плата');
+            $(this).closest('.droplist').children('.droplist__result').removeClass('droplist__result_active');
         }
         
     });
