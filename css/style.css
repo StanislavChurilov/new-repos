@@ -389,7 +389,7 @@ body {
     font-family: 'Inter';
     font-size: 15px;
     line-height: 18.15px;
-    font-weight: 600;
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -411,6 +411,7 @@ body {
 .cabinet__tab_button.active {
     background-color: #2F353D;
     color: #fff;
+    font-weight: 600;
 }
 .cabinet {
     font-family: 'Inter';
@@ -997,8 +998,9 @@ p {
 .cabinet__block_package_empty .cabinet__subtitle {
     max-width: 100%;
     width: 301px;
-    white-space: wrap;
+    white-space: normal;
     text-align: center;
+    margin: 0 auto;
     margin-bottom: 25px;
 }
 .fill__button_gradient {
@@ -1154,6 +1156,7 @@ p {
         font-weight: 500;
         line-height: 24.2px;
         margin-bottom: 26px;
+        padding: 0px 15px 0px 0px;
     }
     .manager__nav li:nth-child(2) {
         border-radius: 5px 5px 0px 0px;
@@ -1404,6 +1407,24 @@ p {
         right: 17px;
         top: 17px;
         background-color: transparent;
+        display: block;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .manager__nav_button svg {
+        height: 7px;
+        width: 27px;
+        display: block;
+        margin: auto auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+    .manager__nav_button svg rect {
+        height: 7px;
+        width: 7px;
     }
     .manager__nav_button:hover {
         background-color: transparent;
