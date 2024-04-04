@@ -1149,6 +1149,7 @@ p {
         color: #fff;
         border: none;
         margin-bottom: 1px;
+        text-align: left;
     }
     .manager__nav li.mob__only {
         background-color: transparent;
@@ -1412,7 +1413,7 @@ p {
         vertical-align: middle;
     }
     .manager__nav_button svg {
-        height: 7px;
+        height: 8px;
         width: 27px;
         display: block;
         margin: auto auto;
