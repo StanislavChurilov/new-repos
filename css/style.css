@@ -1,6 +1,6 @@
 /* Основные стили */
 body {
-    background-color: #ddd;
+    background-color: #EDEFF5;
     margin: 0;
 } 
 .container {
@@ -473,6 +473,7 @@ p {
     font-size: 15px;
     line-height: 18.15px;
     color: #5898FF;
+    font-weight: 400;
 }
 .cabinet__link_right {
     margin-left: auto;
@@ -905,10 +906,10 @@ p {
         display: flex;
         justify-content: space-between;
     }
-    .container {
+    .cabinet__companys .container {
         max-width: 100%;
         padding: 13px;
-        border-radius: 10px;
+        border-radius: 0;
     }
     .cabinet {
         padding: 17px;
@@ -1168,6 +1169,10 @@ p {
         top: 0;
         right: auto;
         left: 0;
+    }
+    .close__popup_inner svg {
+        width: 26px;
+        height: 26px;
     }
     .cabinet__companys .cabinet__popup_company {
         z-index: 900;
