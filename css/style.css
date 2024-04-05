@@ -1015,6 +1015,7 @@ p {
         font-size: 15px;
         line-height: 18.15px;
         color: #5898FF;
+        font-weight: 400;
     }
     .cabinet__block:last-child {
         margin-bottom: 18px;
