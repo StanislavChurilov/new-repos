@@ -628,6 +628,10 @@ p {
     cursor: pointer;
     align-self: flex-start;
 }
+.cabinet__tab_companys_full {
+    padding-bottom: 50px;
+    overflow: hidden;
+}
 .cabinet__block_companys {
     overflow: visible;
 }
@@ -640,9 +644,9 @@ p {
 }
 .company__nav {
     position: absolute;
-    right: -400%;
+    right: 0;
     opacity: 0;
-    top: 10px;
+    top: 400px;
     padding-top: 0;
     padding-left: 0;
     border-radius: 5px;
@@ -658,6 +662,7 @@ p {
 }
 .company__nav_button:hover .company__nav {
     right: 0;
+    top: 10px;
     opacity: 1;
 }
 .company__nav li {
