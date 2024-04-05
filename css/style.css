@@ -1,6 +1,9 @@
 /* Основные стили */
+body, html {
+    height: 100%;
+}
 body {
-    background-color: #EDEFF5;
+    background-color: #ddd;
     margin: 0;
 } 
 .container {
@@ -10,14 +13,20 @@ body {
    box-sizing: border-box;
    background-color: #EDEFF5;
 }
+.wrapper {
+    height: 100%;
+}
 .cabinet__companys * {
     font-family: 'Inter';
 }
 .cabinet__companys .container {
     overflow: hidden;
+    min-height: 100%;
+    height: 100%;
 }
 .cabinet__companys {
     position: relative;
+    height: 100%;
 }
 .cabinet__companys .droplist {
     width: 401px;
