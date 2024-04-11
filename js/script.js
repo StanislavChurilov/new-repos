@@ -5,7 +5,7 @@ $(document).ready(function () {
         $('.graphic__tab').removeClass('active');
         $('.graphic__tab').eq($(this).data('tab')).addClass('active');
     });
-
+    
     function dropL() {
         $('.droplist__selected').click(function (e) {
             let cross = $( ".droplist__icon_cross" ); 
@@ -102,7 +102,7 @@ $(document).ready(function () {
         content: 'Вчера',
         className: 'custom__button custom__button_yesterday',
         onClick: (dp) => {
-            let date = new Date('2021-07-26');
+            let date = new Date();
             dp.selectDate(date);
             dp.setViewDate(date);
         }
@@ -129,11 +129,21 @@ $(document).ready(function () {
         }
     }
 
-    new AirDatepicker('.datepicker', {
+    let datePicker = new AirDatepicker('.datepicker', {
+        
         onSelect({date, formattedDate, datepicker}) {
+            
+           if (datePicker.selectedDates.length > 0) {
             $('.datepicker').addClass('active');
             $('.droplist__datepicker').addClass('active');
+           }
+           else {
+            $('.datepicker').removeClass('active');
+            $('.droplist__datepicker').removeClass('active');
+           }
+             
         },
+
         range: true,
         autoClose: true,
         multipleDatesSeparator: ' - ',
@@ -141,14 +151,11 @@ $(document).ready(function () {
         // inline: true
         
     });
-    
 
-    $('.datepicker').change(function(e) { 
-        if($(this).val() !== '') {
-            alert('не пусто');
-            $(this).siblings('.droplist__icon_arrow').hide();
-        }
-        
+    $('.droplist__datepicker .droplist__icon_cross').click(function (e) {
+        $('.datepicker').removeClass('active');
+        $('.droplist__datepicker').removeClass('active');
+        datePicker.clear();
     });
 
     $('.month__btn').click(function (e) {
