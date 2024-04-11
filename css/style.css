@@ -163,6 +163,13 @@ body {
 .air-datepicker--buttons {
     padding: 0;
 }
+.air-datepicker-cell.-current-.-in-range- {
+    color: rgba(255, 255, 255, .7);
+}
+.air-datepicker-button:hover {
+    color: #5898FF;
+    background-color: #EFF5FF;
+}
 .field {
     display: block;
     padding: 11.5px 15px 11.5px 15px;
@@ -452,6 +459,9 @@ p {
     font-weight: 300;
     font-size: 13px;
 }
+.cirlce__responses_button {
+    cursor: pointer;
+}
 .circles__block {
     display: flex;
 }
@@ -578,17 +588,62 @@ p {
     margin-top: 15px;
 }
 .statistic__buttom__numbers .number {
-    margin-right: 20px;
+    margin-right: 18px;
     font-size: 12px;
     line-height: 14.52px;
     color: #9098B4;
+}
+.statistic__buttom__numbers .number:nth-child(1) {
+    margin-right: 22px;
+}
+.statistic__buttom__numbers .number:nth-child(2) {
+    margin-right: 22px;
+}
+.statistic__buttom__numbers .number:nth-child(3) {
+    margin-right: 21px;
+}
+.statistic__buttom__numbers .number:nth-child(4) {
+    margin-right: 21px;
+}
+.statistic__buttom__numbers .number:nth-child(5) {
+    margin-right: 21px;
+}
+.statistic__buttom__numbers .number:nth-child(6) {
+    margin-right: 21px;
+}
+.statistic__buttom__numbers .number:nth-child(7) {
+    margin-right: 22px;
+}
+.statistic__buttom__numbers .number:nth-child(8) {
+    margin-right: 22px;
+}
+.statistic__buttom__numbers .number:nth-child(9) {
+    margin-right: 21px;
+}
+.statistic__buttom__numbers .number:nth-child(10) {
+    margin-right: 21px;
+}
+.statistic__buttom__numbers .number:nth-child(11) {
+    margin-right: 23px;
+}
+.statistic__buttom__numbers .number:nth-child(12) {
+    margin-right: 22px;
+}
+.statistic__buttom__numbers .number:nth-child(13) {
+    margin-right: 22px;
+}
+.statistic__buttom__numbers .number:nth-child(14) {
+    margin-right: 20px;
+}
+.statistic__buttom__numbers .number:nth-child(15) {
+    margin-right: 18px;
 }
 .statistic__buttom__numbers .number:last-child {
     margin-right: 0;
 }
 .graphic__block {
     padding-left: 30px;
-    width: 766px;
+    width: 776px;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
@@ -624,7 +679,7 @@ p {
     padding: 14px 25px;
     background-color: #F4F6F8;
     margin-bottom: 10px;
-    border-radius: 5px 15px 15px 5px;
+    border-radius: 5px 10px 10px 5px;
     display: flex;
     align-items: center;
 }
@@ -674,6 +729,9 @@ p {
 .cabinet__box_vacancy {
     width: 100%;
     margin-top: 15px;
+}
+.cabinet__box_vacancy .vacancy__resume_line {
+    color: #9098B4;
 }
 .cabinet__box_vacancy .vacancy__resume_line_active {
     background-color: #EFF5FF;
@@ -725,7 +783,7 @@ p {
 }
 .cabinet__block_main_empty .cabinet__subtitle {
     max-width: 100%;
-    width: 363px;
+    width: 420px;
     white-space: normal;
     text-align: center;
     margin: 0 auto;
@@ -790,6 +848,10 @@ p {
 }
 .cabinet__box__articles .cabinet__container {
     padding-top: 25px;
+}
+.droplist__datepicker.active .field.active {
+    background-color: #fff;
+    outline: none;
 }
 
 @media screen and (max-width: 1170px) {
@@ -1059,9 +1121,12 @@ p {
     }
     .cabinet__box_vacancy .vacancy__resume_numbers {
         width: 42px;
-        font-size: 15px;
-        line-height: 18.15px;
+        font-size: 18px;
+        line-height: 21.78px;
         margin-right: 14px;
+    }
+    .graphic__tabs {
+        overflow: hidden;
     }
     .cabinet__box_vacancy .vacancy__resume_text {
         width: 240px;
@@ -1073,8 +1138,8 @@ p {
         margin-right: 10px;
     }
     .cabinet__box_vacancy .vacancy__resume_progress {
-        font-size: 16px;
-        line-height: 19.36px;
+        font-size: 18px;
+        line-height: 21.78px;
     }
     .cabinet__box_vacancy {
         order: 2;
@@ -1089,6 +1154,7 @@ p {
     }
     .cabinet__block_main_empty .cabinet {
         padding-bottom: 17px;
+        border-radius: 5px;
     }
     .cabinet__block_company .cabinet__image {
         margin-top: 0;
