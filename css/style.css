@@ -95,6 +95,8 @@ body {
 }
 .air-datepicker-cell.-selected-.-current- {
     background-color: #EFF5FF;
+    font-weight: 700;
+    color: #5898FF;
 }
 .air-datepicker-cell.-in-range- {
     background-color: #EFF5FF;
@@ -105,7 +107,17 @@ body {
     color: #5898FF;
     border: none;
 }
+.air-datepicker-cell.-range-from- {
+    background-color: #EFF5FF;
+    color: #5898FF;
+    border: none;
+}
 .air-datepicker-cell.-range-to-.-range-from- {
+    background-color: #EFF5FF;
+    color: #5898FF;
+    border: none;
+}
+.air-datepicker-cell.-range-from-.-range-to- {
     background-color: #EFF5FF;
     color: #5898FF;
     border: none;
@@ -130,6 +142,13 @@ body {
 .air-datepicker-cell.-current- {
     color: #5898FF;
     font-weight: 700;
+}
+.-selected-.air-datepicker-cell.-year-.-other-decade-, .-selected-.air-datepicker-cell.-day-.-other-month- {
+    background-color: #EFF5FF;
+    color: rgb(88, 152, 255, .5);
+}
+.-selected-.air-datepicker-cell.-year-.-other-decade-.-focus-, .-selected-.air-datepicker-cell.-day-.-other-month-.-focus- {
+    background-color: #EFF5FF;
 }
 .air-datepicker-button {
     color: #5898FF;
