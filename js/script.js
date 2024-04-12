@@ -147,8 +147,8 @@ $(document).ready(function () {
         range: true,
         autoClose: true,
         multipleDatesSeparator: ' - ',
-        buttons: ['today', buttonYesterday, buttonCurWeek, buttonLastWeek, buttonLastYear],
-        inline: true
+        buttons: ['today', buttonYesterday, buttonCurWeek, buttonLastWeek, buttonLastYear]
+        // inline: true
         
     });
 
