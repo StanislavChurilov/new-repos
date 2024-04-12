@@ -173,6 +173,13 @@ body {
     color: #5898FF;
     background-color: #EFF5FF;
 }
+.-in-range-.air-datepicker-cell.-year-.-other-decade-, .-in-range-.air-datepicker-cell.-day-.-other-month- {
+    background-color: #5898FF;
+    color: #9098B4;
+}
+.-in-range-.air-datepicker-cell.-year-.-other-decade-.-focus-, .-in-range-.air-datepicker-cell.-day-.-other-month-.-focus- {
+    background-color: #5898FF;
+}
 .field {
     display: block;
     padding: 11.5px 15px 11.5px 15px;
@@ -898,7 +905,7 @@ p {
        width: 100%;
     }
     .cabinet__box_graphic {
-        width: 49%;
+        width: 63%;
         height: auto;
     }
     .cabinet__box_responses {
@@ -917,14 +924,19 @@ p {
         width: 100%;
         overflow-x: auto;
         padding-bottom: 15px;
+        display: flex;
     }
     .graphic__month {
         padding-left: 30px;
+        display: block !important;
+    }
+    .graphic__month.month-second {
+        padding-left: 0;
     }
     .cabinet__box_tops {
         order: 1;
         margin-top: 0;
-        width: 49%;
+        width: 35%;
         height: auto;
     }
     .sites__list {
@@ -953,6 +965,13 @@ p {
     }
     .cabinet__box_vacancy {
         order: 2;
+    }
+    .month__period_buttons {
+        display: none;
+    }
+    .cabinet__box_graphic .cabinet__name_top {
+        padding-top: 21px;
+        padding-bottom: 21px;
     }
 }
 @media screen and (max-width: 830px) {
