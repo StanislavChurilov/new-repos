@@ -125,7 +125,8 @@ body {
     background-color: #5898FF;
 }
 .air-datepicker-cell.-current- {
-    color: #5898FF;
+    color: #2F353D;
+    font-weight: 700;
 }
 .air-datepicker-button {
     color: #5898FF;
@@ -167,7 +168,7 @@ body {
     padding: 0;
 }
 .air-datepicker-cell.-current-.-in-range- {
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, 1);
 }
 .air-datepicker-button:hover {
     color: #5898FF;
@@ -175,7 +176,7 @@ body {
 }
 .-in-range-.air-datepicker-cell.-year-.-other-decade-, .-in-range-.air-datepicker-cell.-day-.-other-month- {
     background-color: #5898FF;
-    color: #9098B4;
+    color: rgba(255, 255, 255, .6);
 }
 .-in-range-.air-datepicker-cell.-year-.-other-decade-.-focus-, .-in-range-.air-datepicker-cell.-day-.-other-month-.-focus- {
     background-color: #5898FF;
