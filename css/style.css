@@ -28,6 +28,7 @@ body {
 }
 .air-datepicker-body--cells.-days- {
     grid-auto-rows: 30px;
+    row-gap: 5px;
 }
 .air-datepicker-nav {
     padding: 15px 25px;
@@ -90,42 +91,44 @@ body {
     font-size: 14px;
 }
 .air-datepicker-cell.-selected- {
-    background-color: #5898FF;
+    background-color: #EFF5FF;
 }
 .air-datepicker-cell.-selected-.-current- {
-    background-color: #5898FF;
+    background-color: #EFF5FF;
 }
 .air-datepicker-cell.-in-range- {
-    background-color: #5898FF;
-    color: #fff;
+    background-color: #EFF5FF;
+    color: #5898FF;
 }
 .air-datepicker-cell.-range-to- {
-    background-color: #5898FF;
-    color: #fff;
+    background-color: #EFF5FF;
+    color: #5898FF;
     border: none;
 }
 .air-datepicker-cell.-range-to-.-range-from- {
-    background-color: #5898FF;
-    color: #fff;
+    background-color: #EFF5FF;
+    color: #5898FF;
     border: none;
 }
 .air-datepicker-cell.-selected- {
-    background-color: #5898FF;
+    background-color: #EFF5FF;
+    color: #5898FF;
 }
 .air-datepicker-cell.-selected-.-focus- {
-    background-color: #5898FF;
+    background-color: #EFF5FF;
 }
 .air-datepicker-cell.-range-from- {
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 15px 0px 0px 15px;
 }
 .air-datepicker-cell.-range-to- {
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 15px 15px 0px;
 }
 .air-datepicker-cell.-in-range-:hover {
-    background-color: #5898FF;
+    background-color: #EFF5FF;
+    color: #5898FF;
 }
 .air-datepicker-cell.-current- {
-    color: #2F353D;
+    color: #5898FF;
     font-weight: 700;
 }
 .air-datepicker-button {
@@ -168,18 +171,19 @@ body {
     padding: 0;
 }
 .air-datepicker-cell.-current-.-in-range- {
-    color: rgba(255, 255, 255, 1);
+    color: #5898FF;
 }
 .air-datepicker-button:hover {
     color: #5898FF;
     background-color: #EFF5FF;
 }
 .-in-range-.air-datepicker-cell.-year-.-other-decade-, .-in-range-.air-datepicker-cell.-day-.-other-month- {
-    background-color: #5898FF;
-    color: rgba(255, 255, 255, .6);
+    background-color: #EFF5FF;
+    color: rgba(88, 152, 255, .5);
 }
 .-in-range-.air-datepicker-cell.-year-.-other-decade-.-focus-, .-in-range-.air-datepicker-cell.-day-.-other-month-.-focus- {
-    background-color: #5898FF;
+    background-color: #EFF5FF;
+    color: #5898FF;
 }
 .field {
     display: block;
