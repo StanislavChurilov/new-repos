@@ -189,6 +189,10 @@ body {
     background-color: #EFF5FF;
     outline: 1px solid #5898FF;
 }
+.datepicker.field:focus {
+    background-color: #fff;
+    outline: none;
+}
 .field::placeholder {
     color: #9098B4;
 }
@@ -202,6 +206,9 @@ body {
 }
 .field:focus::placeholder {
     color: transparent;
+}
+.datepicker.field:focus::placeholder {
+    color: #9098B4;
 }
 .cabinet__main .droplist {
     width: auto;
@@ -232,7 +239,7 @@ body {
     min-width: 168px;
 }
 .outside__panel .droplist__icon_arrow {
-    top: 16px;
+    top: 17px;
 }
 .outside__panel .droplist__datepicker {
     min-width: 111px;
@@ -570,6 +577,10 @@ p {
 .graphic__month.active {
    display: block;
 }
+.graphic__month svg {
+    position: relative;
+    top: 0px;
+}
 .numbers__hidden__left_lines {
     z-index: 0;
 }
@@ -592,8 +603,11 @@ p {
     font-size: 12px;
     line-height: 14.52px;
     color: #9098B4;
+    width: 39.77px;
+    display: inline-block;
+    margin-right: 9.61px;
 }
-.statistic__buttom__numbers .number:nth-child(1) {
+/* .statistic__buttom__numbers .number:nth-child(1) {
     margin-right: 22px;
 }
 .statistic__buttom__numbers .number:nth-child(2) {
@@ -637,7 +651,7 @@ p {
 }
 .statistic__buttom__numbers .number:nth-child(15) {
     margin-right: 18px;
-}
+} */
 .statistic__buttom__numbers .number:last-child {
     margin-right: 0;
 }
