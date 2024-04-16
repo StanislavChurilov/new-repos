@@ -70,6 +70,8 @@ body {
 }
 .droplist_active .droplist__items {
     display: block;
+    border-radius: 5px;
+    overflow: hidden;
 }
 .droplist__item:hover {
     color: #5898FF;
