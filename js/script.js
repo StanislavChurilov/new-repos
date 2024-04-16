@@ -2,7 +2,7 @@ $(document).ready(function () {
      let startText;
 
     $('.droplist__selected').click(function (e) {
-        
+        $('.droplist').not($(this).closest('.droplist')).removeClass('droplist_active');
         let cross = $( ".droplist__icon_cross" ); 
         
         if ( !cross.is(e.target) 
