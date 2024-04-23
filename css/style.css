@@ -195,6 +195,9 @@ body {
     color: #5898FF;
     background-color: #EFF5FF;
 }
+.droplist__item_hide:hover {
+    background-color: #fff;
+}
 .droplist__select .droplist__item_active {
     color: #5898FF;
     background-color: #EFF5FF;
@@ -458,10 +461,23 @@ body {
     color: #fff;
     margin: 6.4px 0;
     margin-right: 15px;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.reques > span {
+    max-width: calc(160px - 50px);
+    width: max-content;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .reques svg {
-    margin-left: 8px;
+    margin-left: auto;
     cursor: pointer;
+    width: 16px;
+    height: 17px;
 }
 .droplist__icon_arrow_fill {
     display: none;
@@ -559,13 +575,21 @@ body {
     }
     .requests {
         max-width: calc(100% - 20px);
-        padding: 10px 5px 5px 0;
+        padding: 10px 0 0 0;
         box-sizing: border-box;
     }
     .reques {
         margin-right: 5px;
         margin-bottom: 5px;
         margin-top: 0;
+    }
+    .reques > span {
+        max-width: calc(200px - 50px);
+        width: max-content;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-right: 5px;
     }
 }
 @media screen and (max-width: 340px) {

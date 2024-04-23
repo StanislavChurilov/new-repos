@@ -34,7 +34,6 @@ $(document).ready(function () {
         let currentVal = $(this).text();
         if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check')) {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
-            // activeDroplistCountReturn();
         }
        
        if($(this).closest('.droplist').hasClass('droplist__select')) {
@@ -50,7 +49,7 @@ $(document).ready(function () {
         else {
             $(this).removeClass('droplist__item_active');
         }
-        $(this).closest('.droplist').find('.droplist__result').addClass();
+        
         let currentValChecked = $(this).closest('.droplist').find('.check:checked').map(function () {
             return $(this).val();
         }).get().join(', ');
@@ -164,7 +163,7 @@ $(document).ready(function () {
         if(activeDroplistCount == 0) {
             $('.droplist__dropindrop').find('.droplist__result_text').text(startTextDropindrop);
             $('.droplist__result').removeClass('droplist__result_active');
-            $('.droplist__inner').removeClass('droplist_active');
+            // $('.droplist__inner').removeClass('droplist_active');
             $('.droplist').find('.droplist__item').removeClass('droplist__item_active');
             $('.droplist__result').removeClass('droplist__result_max');
             $('.reques').remove();
@@ -184,7 +183,7 @@ $(document).ready(function () {
 
      function sendValueSearch() {
         searchValue = $('.droplist__field_search').val();
-        requestSearchText = `<div class="reques"> ${searchValue} <svg class="close__request" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        requestSearchText = `<div class="reques"> <span>${searchValue}</span> <svg class="close__request" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1_370)">
                             <path d="M12.5 4L3.5 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M12.5 13L3.5 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
