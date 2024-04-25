@@ -26,13 +26,13 @@ $(document).ready(function () {
 		}
         
     });
-    $('.droplist__item').click(function () {
+    $('.droplist__item').not('.droplist__item_nohover').click(function () {
         
         console.log(tempateActiveDroplistCount);
         startText = $(this).closest('.droplist').find('.droplist__result_text').data('start');
         console.log(startText);
         let currentVal = $(this).text();
-        if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check')) {
+        if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check') || $(this).closest('.droplist').hasClass('droplist__fields')) {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
         }
        
@@ -42,7 +42,7 @@ $(document).ready(function () {
         $(this).addClass('droplist__item_active').siblings().removeClass('droplist__item_active');
        }
 
-       if($(this).closest('.droplist').hasClass('droplist__check')) {
+       if($(this).closest('.droplist').hasClass('droplist__check') || $(this).closest('.droplist').hasClass('droplist__fields')) {
         if($(this).children('input').is(':checked')) {
             $(this).addClass('droplist__item_active');
         }
@@ -55,14 +55,20 @@ $(document).ready(function () {
         }).get().join(', ');
         $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentValChecked);
 
-        if (currentValChecked == 0) {
+        if (currentValChecked == 0 && $(this).closest('.droplist').find('input[type="text"]').val() == '') {
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result_text').text(startText);
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_max');
-            
         }
         else {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_max');
+            if($(this).closest('.droplist').hasClass('droplist__fields')) {
+                $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_max');
+                $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
+            }
+        }
+        if($(this).closest('.droplist').find('input[type="text"]').length > 0) {
+            $(this).closest('.droplist').find('input[type="text"]').val('');
         }
         
        }
@@ -72,6 +78,7 @@ $(document).ready(function () {
         startText = $(this).closest('.droplist').find('.droplist__result_text').data('start');
         $(this).closest('.droplist__result').removeClass('droplist__result_active');
         $(this).closest('.droplist').find('.droplist__item').removeClass('droplist__item_active');
+        $(this).closest('.droplist').find('input').prop('checked', false);
         $(this).closest('.droplist').find('.droplist__field').val('');
         if($(this).closest('.droplist').hasClass('droplist__select')) {
             $(this).closest('.droplist').find('.droplist__result_text').text(startText);
@@ -108,16 +115,19 @@ $(document).ready(function () {
         if(currentFromVal !== '' && currentToVal  == '') {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult);
+            $(this).closest('.droplist').find('input').prop('checked', false);
             // activeDroplistCountReturn();
         }
         if(currentToVal  !== '' && currentFromVal == '') {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(toValResult);
+            $(this).closest('.droplist').find('input').prop('checked', false);
             // activeDroplistCountReturn();
         }
         if(currentFromVal !== '' && currentToVal  !== '') {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult + toValResult);
+            $(this).closest('.droplist').find('input').prop('checked', false);
             // activeDroplistCountReturn();
         }
         if(currentFromVal == '' && currentToVal == '') {
