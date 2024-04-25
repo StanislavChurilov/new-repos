@@ -139,6 +139,10 @@ $(document).ready(function () {
             
             // activeDroplistCountReturn();
         }
+        if(currentFromVal == '' && currentToVal == '' && $(this).closest('.droplist').find('.check').is(':checked')) {
+            $(this).closest('.droplist').find('.droplist__result_text').text($(this).closest('.droplist').find('.check:checked').val());
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
+        }
         
     });
      // Использовать если списки в простом блоке
