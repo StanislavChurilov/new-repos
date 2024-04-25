@@ -53,7 +53,10 @@ $(document).ready(function () {
         let currentValChecked = $(this).closest('.droplist').find('.check:checked').map(function () {
             return $(this).val();
         }).get().join(', ');
-        $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentValChecked);
+        if($(this).closest('.droplist').find('input[type="text"]').val() == '') {
+            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentValChecked);
+        }
+        
 
         if (currentValChecked == 0 && $(this).closest('.droplist').find('input[type="text"]').val() == '') {
             $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
@@ -67,9 +70,9 @@ $(document).ready(function () {
                 $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             }
         }
-        if($(this).closest('.droplist').find('input[type="text"]').length > 0) {
-            $(this).closest('.droplist').find('input[type="text"]').val('');
-        }
+        // if($(this).closest('.droplist').find('input[type="text"]').length > 0) {
+        //     $(this).closest('.droplist').find('input[type="text"]').val('');
+        // }
         
        }
         
@@ -115,19 +118,19 @@ $(document).ready(function () {
         if(currentFromVal !== '' && currentToVal  == '') {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult);
-            $(this).closest('.droplist').find('input').prop('checked', false);
+            // $(this).closest('.droplist').find('input').prop('checked', false);
             // activeDroplistCountReturn();
         }
         if(currentToVal  !== '' && currentFromVal == '') {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(toValResult);
-            $(this).closest('.droplist').find('input').prop('checked', false);
+            // $(this).closest('.droplist').find('input').prop('checked', false);
             // activeDroplistCountReturn();
         }
         if(currentFromVal !== '' && currentToVal  !== '') {
             $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
             $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult + toValResult);
-            $(this).closest('.droplist').find('input').prop('checked', false);
+            // $(this).closest('.droplist').find('input').prop('checked', false);
             // activeDroplistCountReturn();
         }
         if(currentFromVal == '' && currentToVal == '') {
