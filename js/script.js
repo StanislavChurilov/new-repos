@@ -217,6 +217,7 @@ $(document).ready(function () {
             $('.popup__image img').attr('src', 'img/' + $(this).text());
             $('.popup__image').fadeIn();
             $('.popup__image_button_download').children('a').attr('href', 'img/' + $(this).text());
+            $('.overlay').show();
         });
     }
     popupImageOpen();
@@ -230,6 +231,7 @@ $(document).ready(function () {
 
     $('.popup__image_button_close').click(function (e) { 
         $(this).closest('.popup__image').fadeOut();
+        $('.overlay').hide();
     });
 
     $('.show__more_question').click(function () {

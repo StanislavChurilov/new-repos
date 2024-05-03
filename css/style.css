@@ -780,6 +780,9 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 87%;
     font-size: 15px;
 }
+.sort__block .droplist .droplist__result_active {
+    background-color: #EFF5FF;
+}
 .sort__block .droplist .droplist__icon_cross {
     width: 16px;
     height: 16px;
@@ -977,7 +980,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .enter__message:focus {
     background-color: #fff;
-    outline: 1px solid #5898FF;
+    outline: 1px solid transparent;
 }
 .enter__message::placeholder {
     color: #9098B4;
