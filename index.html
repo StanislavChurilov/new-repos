@@ -6,524 +6,42 @@
 	<link rel="stylesheet" href="css/global.css" media="all">
 	<link rel="stylesheet" href="css/drop-style.css" media="all">
 	<link rel="stylesheet" href="css/style.css" media="all">
-	<title>Jobers cabinet</title> 
+	<title>Jobers support</title> 
 </head>
 <body>
 	<div class="wrapper">
 
-		<div class="cabinet__settings">
-
-			<div class="overlay"></div>
-			<span class="close__popup"></span>
-			<div class="cabinet__popup cabinet__popup_profile_edit">
-				
-				<p class="cabinet__popup__title">Редактирование профиля</p>
-				<p class="cabinet__popup__subtitle">Это ваш профиль</p>
-				<form class="cabinet__popup_form" action="">
-					<div class="cabinet__popup_image">
-						<img class="profile__img" src="img/no-image150.png" alt="">
-						<label class="input__file load load__profile_image cabinet__link">
-							<input type="file" class="file__image" value="Загрузить">
-							Загрузить
-						</label>
-						<label class="delete__profile_image">Удалить</label>
-						
-					</div>
-					<div class="cabinet__popup_fields">
-						<div class="field__box">
-							<p class="field__name_popup">Фамилия</p>
-							<input type="text" class="field" placeholder="Иванов">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Имя</p>
-							<input type="text" class="field" placeholder="Иван">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Отчество</p>
-							<input type="text" class="field" placeholder="Иванович">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Телефон</p>
-							<input type="tel" class="field" placeholder="+7">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Электронная почта</p>
-							<input type="email" class="field" placeholder="ivan@mail.ru">
-						</div>
-					</div>
-
-					<div class="cabinet__popup_buttons">
-						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-					</div>
-					
-				</form>
-				
-			</div>
-
-			<div class="cabinet__popup cabinet__popup_manager_add">
-				<p class="cabinet__popup__title">Добавление менеджера</p>
-				<p class="cabinet__popup__subtitle">Заполните данные нового менеджера, ему придет приглашение на электронную почту</p>
-				<form class="cabinet__popup_form" action="">
-					<div class="cabinet__popup_fields">
-						<div class="field__box">
-							<p class="field__name_popup">Фамилия</p>
-							<input type="text" class="field" placeholder="Иванов">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Имя</p>
-							<input type="text" class="field" placeholder="Иван">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Отчество</p>
-							<input type="text" class="field" placeholder="Иванович">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Электронная почта</p>
-							<input type="email" class="field" placeholder="ivan@mail.ru">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Телефон</p>
-							<input type="tel" class="field" placeholder="+7">
-						</div>
-					</div>
-					
-					<div class="cabinet__popup_checks">
-						<div class="field__box field__box_check">
-							<input id="manager-access-add" class="check" type="checkbox">
-							<label for="manager-access-add">Доступ к бухгалтерским документам</label>
-						</div>
-						<div class="field__box field__box_check">
-							<input id="manager-creation-add" class="check" type="checkbox">
-							<label for="manager-creation-add">Создание и редактирование объявлений</label>
-						</div>
-						<div class="field__box field__box_check">
-							<input id="manager-add-add" class="check" type="checkbox">
-							<label for="manager-add-add">Добавление и смена ответственного по вакансии</label>
-						</div>
-						<div class="field__box field__box_check">
-							<input id="manager-view-add" class="check" type="checkbox">
-							<label for="manager-view-add">Просмотр только тех вакансий, в которых назначен ответственным</label>
-						</div>
-					</div>
-					
-
-					<div class="cabinet__popup_buttons">
-						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-					</div>
-					
-					<!-- <div class="droplist droplist__select droplist_active">
-						<div class="form__list" action="">
-							<div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите 1 вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
-								<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-								</svg>
-							</div>
-							<ul class="droplist__items">
-								<li class="droplist__item">1 вариант</li>
-								<li class="droplist__item">2 вариант</li>
-								<li class="droplist__item">3 вариант</li>
-								<li class="droplist__item">4 вариант</li>
-							</ul>
-						</div>
-					</div> -->
-
-					<!-- <div class="droplist droplist__check droplist_active">
-						<div class="form__list" action="">
-							<div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите несколько вариантов</span>
-								<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-								</svg>
-							</div>
-						
-							<ul class="droplist__items">
-								<li class="droplist__item droplist__item_active"><input id="variant-1" class="check" type="checkbox" value="Вариант 1"><label for="variant-1">Вариант</label></li>
-								<li class="droplist__item droplist__item_active"><input id="variant-2" class="check" type="checkbox" value="Вариант 2"><label for="variant-2">Вариант</label></li>
-								<li class="droplist__item droplist__item_active"><input id="variant-3" class="check" type="checkbox" value="Вариант 3"><label for="variant-3">Вариант</label></li>
-								<li class="droplist__item droplist__item_active"><input id="variant-4" class="check" type="checkbox" value="Вариант 4"><label for="variant-4">Вариант</label></li>
-							</ul>
-						</div>
-					</div> -->
-
-					<!-- <div class="droplist droplist__fields droplist_active">
-						<div class="form__list" action="">
-							<div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Заработная плата</span> <span class="droplist__icon droplist__icon_cross"></span>
-								<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-								</svg>
-							</div>
-						
-							<ul class="droplist__items">
-								<li class="droplist__item droplist__item_nohover"><input class="droplist__field droplist__field_from" type="text" placeholder="от" value=""></li>
-								<li class="droplist__item droplist__item_nohover"><input class="droplist__field droplist__field_to" type="text" placeholder="до" value=""></li>
-								<li class="droplist__item droplist__item_hide"><input id="hide" class="check" type="checkbox" value="Скрыть без зарплаты"><label for="hide">Скрыть без зарплаты</label></li>
-							</ul>
-						</div>
-					</div> -->
-
-				</form>
-				
-			</div>
-
-			<div class="cabinet__popup cabinet__popup_manager_edit">
-				<p class="cabinet__popup__title">Редактирование менеджера</p>
-				<p class="cabinet__popup__subtitle">Это профиль вашего менеджера</p>
-				<form class="cabinet__popup_form" action="">
-					<div class="cabinet__popup_fields">
-						<div class="field__box">
-							<p class="field__name_popup">Фамилия</p>
-							<input type="text" class="field" placeholder="Иванов">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Имя</p>
-							<input type="text" class="field" placeholder="Иван">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Отчество</p>
-							<input type="text" class="field" placeholder="Иванович">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Электронная почта</p>
-							<input type="email" class="field" placeholder="ivan@mail.ru">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Телефон</p>
-							<input type="tel" class="field" placeholder="+7">
-						</div>
-					</div>
-					
-					<div class="cabinet__popup_checks">
-						<div class="field__box field__box_check">
-							<input id="manager-access-edit" class="check" type="checkbox">
-							<label for="manager-access-edit">Доступ к бухгалтерским документам</label>
-						</div>
-						<div class="field__box field__box_check">
-							<input id="manager-create-edit" class="check" type="checkbox">
-							<label for="manager-create-edit">Создание и редактирование объявлений</label>
-						</div>
-						<div class="field__box field__box_check">
-							<input id="manager-add-edit" class="check" type="checkbox">
-							<label for="manager-add-edit">Добавление и смена ответственного по вакансии</label>
-						</div>
-						<div class="field__box field__box_check">
-							<input id="manager-view-edit" class="check" type="checkbox">
-							<label for="manager-view-edit">Просмотр только тех вакансий, в которых назначен ответственным</label>
-						</div>
-					</div>
-					
-
-					<div class="cabinet__popup_buttons">
-						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-					</div>
-					
-				</form>
-				
-			</div>
-
-			<div class="cabinet__popup cabinet__popup_crm_bitrix">
-				<p class="cabinet__popup__title">Интеграция сrm Bitrix24</p>
-				<p class="cabinet__popup__subtitle"><a class="cabinet__link" target="_blank" href="https://help.jobers.ru/settings/integraczii/integracziya-s-bitrix24/">Описание и инструкция по интеграции</a></p>
-				<form class="cabinet__popup_form" action="">
-					<div class="cabinet__popup_fields">
-						<div class="field__box">
-							<p class="field__name_popup">Webhook URL *</p>
-							<input type="text" class="field" placeholder="https://">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Категория</p>
-							<div class="droplist droplist__select">
-								<div class="form__list" action="">
-									<div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
-										<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-										</svg>
-									</div>
-									<ul class="droplist__items">
-										<li class="droplist__item">Категория 1</li>
-										<li class="droplist__item">Категория 2</li>
-										<li class="droplist__item">Категория 3</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Ответственный</p>
-							<div class="droplist droplist__select">
-								<div class="form__list" action="">
-									<div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
-										<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-										</svg>
-									</div>
-									<ul class="droplist__items">
-										<li class="droplist__item">Николай Дроздов</li>
-										<li class="droplist__item">Мария Огонек</li>
-										<li class="droplist__item">Александр Чиж</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Тип экспорта <span class="star">*</span></p>
-							<div class="droplist droplist__select">
-								<div class="form__list" action="">
-									<div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
-										<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-										</svg>
-									</div>
-									<ul class="droplist__items">
-										<li class="droplist__item">Лид</li>
-										<li class="droplist__item">Сделка</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="cabinet__popup_checks">
-						<div class="field__box field__box_check">
-							<input id="crm-bitrix-1" class="check" type="checkbox">
-							<label for="crm-bitrix-1">Создавать повторный лид</label>
-						</div>
-					</div>
-					
-
-					<div class="cabinet__popup_buttons">
-						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-					</div>
-					
-				</form>
-				
-			</div>
-
-			<div class="cabinet__popup cabinet__popup_crm_amo">
-				<p class="cabinet__popup__title">Интеграция Amocrm</p>
-				<p class="cabinet__popup__subtitle"><a class="cabinet__link" target="_blank" href="https://help.jobers.ru/settings/integraczii/integracziya-s-amocrm/">Описание и инструкция по интеграции</a></p>
-				<form class="cabinet__popup_form" action="">
-					<div class="cabinet__popup_fields">
-						<div class="field__box">
-							<p class="field__name_popup">Поддомен</p>
-							<input type="text" class="field" placeholder="">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Секретный ключ <span class="star">*</span></p>
-							<input type="text" class="field" placeholder="">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">ID интеграции <span class="star">*</span></p>
-							<input type="text" class="field" placeholder="">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Идентификатор воронки <span class="star">*</span></p>
-							<input type="text" class="field" placeholder="">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Идентификатор статуса <span class="star">*</span></p>
-							<input type="text" class="field" placeholder="">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Код авторизации</p>
-							<input type="text" class="field" placeholder="">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Вакансии Jobers</p>
-							<div class="droplist droplist__select">
-								<div class="form__list" action="">
-									<div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
-										<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-										</svg>
-									</div>
-									<ul class="droplist__items">
-										<li class="droplist__item">Менеджер по продажам (ID 424)</li>
-										<li class="droplist__item">Повар в цех (ID 4232)</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Воронка/Статус</p>
-							<div class="droplist droplist__select">
-								<div class="form__list" action="">
-									<div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
-										<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-										</svg>
-									</div>
-									<ul class="droplist__items">
-										<li class="droplist__item">Воронка</li>
-										<li class="droplist__item">ВПО: ВЗЯТО В РАБОТУ</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="fileld__box fileld__box_addvacancy">
-							<span class="cabinet__link add__vacancy">Добавить вакансию</span>
-						</div>
-					</div>
-					
-
-					<div class="cabinet__popup_buttons">
-						<div class="button__c fill__button">Сохранить</div>
-						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-					</div>
-					
-				</form>
-				
-			</div>
-
-			<div class="cabinet__popup cabinet__popup_crm_potok">
-				<p class="cabinet__popup__title">Интеграция сrm Potok</p>
-				<p class="cabinet__popup__subtitle"><a class="cabinet__link" target="_blank" href="https://help.jobers.ru/settings/integraczii/integracziya-s-potok/">Описание и инструкция по интеграции</a></p>
-				<form class="cabinet__popup_form" action="">
-					<div class="cabinet__popup_fields">
-						<div class="field__box">
-							<p class="field__name_popup">Токен доступа <span class="star">*</span></p>
-							<input type="text" class="field" placeholder="" value="kh249f0zjvmpw1-23i-2oks22-2233-0">
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Вакансии Jobers</p>
-							<div class="droplist droplist__select">
-								<div class="form__list" action="">
-									<div class="droplist__selected item droplist__result item droplist__result_active"><span class="droplist__result_text">Менеджер по продажам (ID 424)</span> <span class="droplist__icon droplist__icon_cross"></span>
-										<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-										</svg>
-									</div>
-									<ul class="droplist__items">
-										<li class="droplist__item droplist__item_active">Менеджер по продажам (ID 424)</li>
-										<li class="droplist__item">Повар в цех (ID 4232)</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="field__box">
-							<p class="field__name_popup">Воронка/Статус</p>
-							<div class="droplist droplist__select">
-								<div class="form__list" action="">
-									<div class="droplist__selected item droplist__result item droplist__result_active"><span class="droplist__result_text">ВПО: ВЗЯТО В РАБОТУ</span> <span class="droplist__icon droplist__icon_cross"></span>
-										<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-										</svg>
-									</div>
-									<ul class="droplist__items">
-										<li class="droplist__item">Воронка</li>
-										<li class="droplist__item droplist__item_active">ВПО: ВЗЯТО В РАБОТУ</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="fileld__box fileld__box_addvacancy">
-							<span class="cabinet__link add__vacancy">Добавить вакансию</span>
-						</div>
-					</div>
-					
-
-					<div class="cabinet__popup_buttons buttons__fullspace">
-						<div class="button__c default__button default__button_error">Отключить</div>
-						<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-					</div>
-					
-				</form>
-				
-			</div>
-
-			<div class="cabinet__popup cabinet__popup_manager_delete">
-				<p class="cabinet__popup__title">Удаление менеджера</p>
-				<p class="cabinet__popup__subtitle">Вы действительно хотите удалить этого менеджера?</p>
-				
-				<div class="cabinet__popup_buttons buttons__fullspace">
-					<div class="button__c default__button default__button_error">Удалить</div>
-					<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-				</div>	
-			</div>
-
-			<div class="cabinet__popup cabinet__popup_template_delete">
-				<p class="cabinet__popup__title">Удаление шаблона</p>
-				<p class="cabinet__popup__subtitle">Вы действительно хотите удалить шаблон “Приглашение” ?</p>
-				
-				<div class="cabinet__popup_buttons buttons__fullspace">
-					<div class="button__c default__button default__button_error">Удалить</div>
-					<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-				</div>	
-			</div>
-
-			<div class="cabinet__popup cabinet__popup_password_save">
-				<p class="cabinet__popup__title">Изменение пароля</p>
-				<p class="cabinet__popup__subtitle">Ваш пароль успешно изменен!</p>
-			</div>
-
-			<div class="cabinet__popup cabinet__popup_fullsize cabinet__popup_email cabinet__popup_newtemplate_email">
-				<p class="cabinet__popup__title">Новый шаблон</p>
-				<div class="flex__box_email_templates">
-					<div class="cabinet__column cabinet__column_left">
-						<div class="field__box">
-							<input type="text" class="field" placeholder="Назовите ваш шаблон" value="">
-							<textarea class="cabinet__popup_textarea" placeholder="Структура письма" name="" id=""></textarea>
-						</div>
-					</div>
-					<div class="cabinet__column cabinet__column_right">
-						<p class="cabinet__popup__title">Вставить переменную</p>
-						<div class="variables__email">
-							<span class="variable var__name cabinet__link">Имя соискателя</span>
-							<span class="variable var__name cabinet__link">Название вакансии</span>
-							<span class="variable var__name cabinet__link">Телефон вакансии</span>
-							<span class="variable var__name cabinet__link">Почта вакансии</span>
-							<span class="variable var__name cabinet__link">Мое имя</span>
-							<span class="variable var__name cabinet__link">Компания</span>
-						</div>
-					</div>
+		<div class="cabinet__popup popup__image">
+			<div class="popup__image_panel">
+				<div class="popup__image_button popup__image_button_download">
+					<a href="" download="">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15.5 9.875V14.25C15.5 14.5815 15.3683 14.8995 15.1339 15.1339C14.8995 15.3683 14.5815 15.5 14.25 15.5H1.75C1.41848 15.5 1.10054 15.3683 0.866116 15.1339C0.631696 14.8995 0.5 14.5815 0.5 14.25V9.875C0.5 9.70924 0.565848 9.55027 0.683058 9.43306C0.800269 9.31585 0.95924 9.25 1.125 9.25C1.29076 9.25 1.44973 9.31585 1.56694 9.43306C1.68415 9.55027 1.75 9.70924 1.75 9.875V14.25H14.25V9.875C14.25 9.70924 14.3158 9.55027 14.4331 9.43306C14.5503 9.31585 14.7092 9.25 14.875 9.25C15.0408 9.25 15.1997 9.31585 15.3169 9.43306C15.4342 9.55027 15.5 9.70924 15.5 9.875ZM7.55781 10.3172C7.61586 10.3753 7.68479 10.4214 7.76066 10.4529C7.83654 10.4843 7.91787 10.5005 8 10.5005C8.08213 10.5005 8.16346 10.4843 8.23934 10.4529C8.31521 10.4214 8.38414 10.3753 8.44219 10.3172L11.5672 7.19219C11.6253 7.13412 11.6713 7.06518 11.7027 6.98931C11.7342 6.91344 11.7503 6.83212 11.7503 6.75C11.7503 6.66788 11.7342 6.58656 11.7027 6.51069C11.6713 6.43482 11.6253 6.36588 11.5672 6.30781C11.5091 6.24974 11.4402 6.20368 11.3643 6.17225C11.2884 6.14083 11.2071 6.12465 11.125 6.12465C11.0429 6.12465 10.9616 6.14083 10.8857 6.17225C10.8098 6.20368 10.7409 6.24974 10.6828 6.30781L8.625 8.36641V1.125C8.625 0.95924 8.55915 0.800269 8.44194 0.683058C8.32473 0.565848 8.16576 0.5 8 0.5C7.83424 0.5 7.67527 0.565848 7.55806 0.683058C7.44085 0.800269 7.375 0.95924 7.375 1.125V8.36641L5.31719 6.30781C5.19991 6.19054 5.04085 6.12465 4.875 6.12465C4.70915 6.12465 4.55009 6.19054 4.43281 6.30781C4.31554 6.42509 4.24965 6.58415 4.24965 6.75C4.24965 6.91585 4.31554 7.07491 4.43281 7.19219L7.55781 10.3172Z" fill="#5898FF"/>
+						</svg>
+					</a>
 				</div>
-				<div class="cabinet__popup_buttons buttons__fullspace">
-					<div class="button__c fill__button">Сохранить</div>
-					<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-				</div>	
-				
-			</div>
-			<div class="cabinet__popup cabinet__popup_fullsize cabinet__popup_email cabinet__popup_edittemplate_email">
-				<p class="cabinet__popup__title">Редактирование шаблона</p>
-				<div class="flex__box_email_templates">
-					<div class="cabinet__column cabinet__column_left">
-						<div class="field__box">
-							<input type="text" class="field" value="Приглашение" placeholder="Назовите ваш шаблон">
-							<textarea class="cabinet__popup_textarea" name="" id="">Здравствуйте, {Имя соискателя}! Благодарим Вас за отклик на вакансию "{Название вакансии}". Ваше резюме показалось нам очень интересным. Мы хотели бы пригласить Вас на интервью. Перезвоните, пожалуйста, в рабочее время по телефону {Телефон вакансии} ({Мое Имя})</textarea>
-						</div>
-					</div>
-					<div class="cabinet__column cabinet__column_right">
-						<p class="cabinet__popup__title">Вставить переменную</p>
-						<div class="variables__email">
-							<span class="variable var__name cabinet__link">Имя соискателя</span>
-							<span class="variable var__name cabinet__link">Название вакансии</span>
-							<span class="variable var__name cabinet__link">Телефон вакансии</span>
-							<span class="variable var__name cabinet__link">Почта вакансии</span>
-							<span class="variable var__name cabinet__link">Мое имя</span>
-							<span class="variable var__name cabinet__link">Компания</span>
-						</div>
-					</div>
+				<div class="popup__image_button popup__image_button_resize">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16.875 3.75V6.875C16.875 7.04076 16.8092 7.19973 16.6919 7.31694C16.5747 7.43415 16.4158 7.5 16.25 7.5C16.0842 7.5 15.9253 7.43415 15.8081 7.31694C15.6908 7.19973 15.625 7.04076 15.625 6.875V4.375H13.125C12.9592 4.375 12.8003 4.30915 12.6831 4.19194C12.5658 4.07473 12.5 3.91576 12.5 3.75C12.5 3.58424 12.5658 3.42527 12.6831 3.30806C12.8003 3.19085 12.9592 3.125 13.125 3.125H16.25C16.4158 3.125 16.5747 3.19085 16.6919 3.30806C16.8092 3.42527 16.875 3.58424 16.875 3.75ZM6.875 15.625H4.375V13.125C4.375 12.9592 4.30915 12.8003 4.19194 12.6831C4.07473 12.5658 3.91576 12.5 3.75 12.5C3.58424 12.5 3.42527 12.5658 3.30806 12.6831C3.19085 12.8003 3.125 12.9592 3.125 13.125V16.25C3.125 16.4158 3.19085 16.5747 3.30806 16.6919C3.42527 16.8092 3.58424 16.875 3.75 16.875H6.875C7.04076 16.875 7.19973 16.8092 7.31694 16.6919C7.43415 16.5747 7.5 16.4158 7.5 16.25C7.5 16.0842 7.43415 15.9253 7.31694 15.8081C7.19973 15.6908 7.04076 15.625 6.875 15.625ZM16.25 12.5C16.0842 12.5 15.9253 12.5658 15.8081 12.6831C15.6908 12.8003 15.625 12.9592 15.625 13.125V15.625H13.125C12.9592 15.625 12.8003 15.6908 12.6831 15.8081C12.5658 15.9253 12.5 16.0842 12.5 16.25C12.5 16.4158 12.5658 16.5747 12.6831 16.6919C12.8003 16.8092 12.9592 16.875 13.125 16.875H16.25C16.4158 16.875 16.5747 16.8092 16.6919 16.6919C16.8092 16.5747 16.875 16.4158 16.875 16.25V13.125C16.875 12.9592 16.8092 12.8003 16.6919 12.6831C16.5747 12.5658 16.4158 12.5 16.25 12.5ZM6.875 3.125H3.75C3.58424 3.125 3.42527 3.19085 3.30806 3.30806C3.19085 3.42527 3.125 3.58424 3.125 3.75V6.875C3.125 7.04076 3.19085 7.19973 3.30806 7.31694C3.42527 7.43415 3.58424 7.5 3.75 7.5C3.91576 7.5 4.07473 7.43415 4.19194 7.31694C4.30915 7.19973 4.375 7.04076 4.375 6.875V4.375H6.875C7.04076 4.375 7.19973 4.30915 7.31694 4.19194C7.43415 4.07473 7.5 3.91576 7.5 3.75C7.5 3.58424 7.43415 3.42527 7.31694 3.30806C7.19973 3.19085 7.04076 3.125 6.875 3.125Z" fill="#5898FF"/>
+					</svg>
 				</div>
-				<div class="cabinet__popup_buttons buttons__fullspace">
-					<div class="button__c fill__button">Сохранить</div>
-					<div class="button__c default__button default__button_active cabinet__popup__cancel">Отмена</div>
-					<div class="button__c default__button default__button_error show__popup" data-popup="delete__template">Удалить шаблон</div>
-				</div>	
-				
+				<div class="popup__image_button popup__image_button_close">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16.067 15.1828C16.1251 15.2409 16.1712 15.3098 16.2026 15.3857C16.234 15.4615 16.2502 15.5429 16.2502 15.625C16.2502 15.7071 16.234 15.7884 16.2026 15.8643C16.1712 15.9402 16.1251 16.0091 16.067 16.0672C16.009 16.1252 15.94 16.1713 15.8642 16.2027C15.7883 16.2342 15.707 16.2503 15.6249 16.2503C15.5427 16.2503 15.4614 16.2342 15.3855 16.2027C15.3097 16.1713 15.2407 16.1252 15.1827 16.0672L9.99986 10.8836L4.81705 16.0672C4.69977 16.1844 4.54071 16.2503 4.37486 16.2503C4.20901 16.2503 4.04995 16.1844 3.93267 16.0672C3.8154 15.9499 3.74951 15.7908 3.74951 15.625C3.74951 15.4591 3.8154 15.3001 3.93267 15.1828L9.11627 9.99998L3.93267 4.81717C3.8154 4.69989 3.74951 4.54083 3.74951 4.37498C3.74951 4.20913 3.8154 4.05007 3.93267 3.93279C4.04995 3.81552 4.20901 3.74963 4.37486 3.74963C4.54071 3.74963 4.69977 3.81552 4.81705 3.93279L9.99986 9.11639L15.1827 3.93279C15.2999 3.81552 15.459 3.74963 15.6249 3.74963C15.7907 3.74963 15.9498 3.81552 16.067 3.93279C16.1843 4.05007 16.2502 4.20913 16.2502 4.37498C16.2502 4.54083 16.1843 4.69989 16.067 4.81717L10.8835 9.99998L16.067 15.1828Z" fill="#F50A0A"/>
+					</svg>
+				</div>
 			</div>
+			<img alt="">
+		</div>
+
+		<div class="cabinet__style cabinet__support">
 
 			<div class="container">
-
 				
 				<div class="cabinet__tabs_panel_container">
 					<div class="cabinet__tabs_panel">
-						<div class="cabinet__tab_button active" data-btn="0">Профиль</div>
-						<div class="cabinet__tab_button" data-btn="1">Уведомления</div>
-						<div class="cabinet__tab_button" data-btn="2">Менеджеры</div>
-						<div class="cabinet__tab_button" data-btn="3">Лицевой счет</div>
-						<div class="cabinet__tab_button" data-btn="4">Интеграции</div>
-						<div class="cabinet__tab_button" data-btn="5">Шаблоны писем</div>
+						<div class="cabinet__tab_button active" data-btn="0">Поддержка</div>
+						<div class="cabinet__tab_button" data-btn="1">Частые вопросы</div>
 					</div>
 				</div>
 				
@@ -531,352 +49,436 @@
 				<div class="cabinet__tabs__area">
 
 					<div class="cabinet__tab cabinet__tab_profile active">
-
-						<div class="cabinet__block cabinet__block_profile">
-							<div class="cabinet cabinet__name_top">Ваш профиль</div>
-							<div class="cabinet cabinet__container">
-								<div class="cabinet__box cabinet__box_image"><img class="desc__img" src="img/no-image.png" alt=""><img class="mob__img" src="img/no-photo170.png" alt=""></div>
-								<div class="cabinet__box cabinet__box_info">
-									<p class="cabinet__title">Иванов Андрей Иванович</p>
-									<p class="cabinet__subtitle">Администратор</p>
-									<p class="cabinet__text">Телефон: <span class="cabinet__text cabinet__text_disabled">8-950-999-02-22</span></p>
-									<p class="cabinet__text">Email: <span class="cabinet__text cabinet__text_disabled">pochta@mail.ru</span></p>
-								</div>
-								<div class="button__c default__button default__button_active show__popup" data-popup="profile__edit">Изменить</div>
+						<div class="sort__block">
+							<div class="droplist droplist__select">
+								<form class="form__list" action="">
+									<div class="droplist__selected item droplist__result item"><span class="droplist__result_text" data-start="Сортировать">Сортировать</span> <span class="droplist__icon droplist__icon_cross"></span>
+										<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"></path>
+										</svg>
+									</div>
+									<ul class="droplist__items">
+										<li class="droplist__item">Открытые обращения</li>
+										<li class="droplist__item">Закрытые обращения</li>
+									</ul>
+								</form>
 							</div>
-							
-						</div>
-
-						<div class="cabinet__block cabinet__block_password">
-							<div class="cabinet cabinet__name_top">Изменение пароля</div>
-							<div class="cabinet cabinet__container">
-								<div class="cabinet__box cabinet__box_top">
-									<div class="field__box">
-										<p class="field__name">Текущий пароль <span class="star">*</span></p>
-										<input type="password" class="field" placeholder="*********">
-									</div>
-								</div>
-								<div class="cabinet__box cabinet__box_bottom">
-									<div class="field__box">
-										<p class="field__name">Новый пароль <span class="star">*</span></p>
-										<input type="password" class="field" placeholder="*********">
-									</div>
-									<div class="field__box">
-										<p class="field__name">Повторите пароль <span class="star">*</span></p>
-										<input type="password" class="field" placeholder="*********">
-									</div>
-								</div>
-								<div class="cabinet__box"><p class="cabinet__text cabinet__text_disabled">Пароль должен состоять минимум из 8 символов, содержать минимум одну строчную, одну прописную букву и одну цифру</p></div>
-								
-							
-								<div class="button__c default__button show__popup" data-popup="password__save">Сохранить</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="cabinet__tab cabinet__tab_notifications">
-
-						<div class="cabinet__block cabinet__block_notifications">
-							<div class="cabinet cabinet__name_top">Управление уведомлениями</div>
-							<div class="cabinet cabinet__container">
-								<div class="switch__box">
-									<div class="switch__button active"><span class="circle"></span></div>
-									<span class="cabinet__text cabinet__text_switch">Всплывающие уведомления</span>
-								</div>
-								<div class="switch__box">
-									<div class="switch__button active"><span class="circle"></span></div>
-									<span class="cabinet__text cabinet__text_switch">Email уведомления </span>
-								</div>
-								<div class="switch__box">
-									<div class="switch__button active"><span class="circle"></span></div>
-									<span class="cabinet__text cabinet__text_switch">Уведомления браузера</span>
-								</div>
-								<div class="switch__box">
-									<div class="switch__button active"><span class="circle"></span></div>
-									<span class="cabinet__text cabinet__text_switch">Смс</span>
-								</div>
-								<div class="switch__box">
-									<div class="switch__button active"><span class="circle"></span></div>
-									<span class="cabinet__text cabinet__text_switch">Telegram</span>
-								</div>
+							<div class="field__box field__box_search">
+								<input class="field field__search" type="search" placeholder="Поиск по номеру обращения, названию или фразе">
+								<button type="submit" class="loop__search_submit">
+									<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.8169 14.4335L11.0862 10.7029C12.1029 9.45954 12.6027 7.87297 12.4824 6.27139C12.3621 4.66981 11.6307 3.17575 10.4397 2.09824C9.24871 1.02073 7.68911 0.442221 6.08351 0.482366C4.47792 0.52251 2.94918 1.17824 1.81349 2.31392C0.677813 3.4496 0.0220832 4.97835 -0.0180617 6.58394C-0.0582065 8.18953 0.520305 9.74914 1.59781 10.9402C2.67532 12.1312 4.16938 12.8625 5.77096 12.9828C7.37254 13.1032 8.95911 12.6033 10.2025 11.5867L13.9331 15.3173C14.051 15.4311 14.2089 15.4941 14.3727 15.4927C14.5366 15.4913 14.6934 15.4256 14.8092 15.3097C14.9251 15.1938 14.9909 15.037 14.9923 14.8732C14.9937 14.7093 14.9307 14.5514 14.8169 14.4335ZM6.24999 11.7504C5.26108 11.7504 4.29438 11.4572 3.47213 10.9078C2.64989 10.3584 2.00903 9.57746 1.63059 8.66383C1.25215 7.7502 1.15313 6.74487 1.34606 5.77496C1.53899 4.80506 2.01519 3.91414 2.71445 3.21488C3.41371 2.51562 4.30463 2.03941 5.27453 1.84649C6.24444 1.65356 7.24977 1.75258 8.1634 2.13102C9.07703 2.50945 9.85793 3.15032 10.4073 3.97256C10.9567 4.79481 11.25 5.76151 11.25 6.75041C11.2485 8.07604 10.7212 9.34694 9.78388 10.2843C8.84652 11.2217 7.57561 11.7489 6.24999 11.7504Z" fill="#9098B4"/>
+									</svg>
+								</button>
 								
 							</div>
+								<div class="button__c fill__button button__create_request">Создать обращение</div>
 						</div>
-
-						<div class="cabinet__block cabinet__block_notifications_email">
-							<div class="cabinet cabinet__name_top">Email уведомления</div>
-							<div class="cabinet cabinet__container">
-								<div class="fields">
-									<div class="field__box field__box_check">
-										<input id="notifications_email_01" class="check_main" type="checkbox">
-										<label for="notifications_email_01">Резюме каждого кандидата</label>
-									</div>
-									<div class="field__box field__box_check">
-										<input id="notifications_email_02" class="check_main" type="checkbox">
-										<label for="notifications_email_02">Напоминание о неоплаченном объявлении</label>
-									</div>
-									<div class="field__box field__box_check">
-										<input id="notifications_email_03" class="check_main" type="checkbox">
-										<label for="notifications_email_03">Оповещения о новых откликах на вакансии</label>
-									</div>
-									<div class="field__box field__box_check">
-										<input id="notifications_email_04" class="check_main" type="checkbox">
-										<label for="notifications_email_04">Оповещение о новой подборке резюме на вакансию</label>
-									</div>
-									<div class="field__box field__box_check">
-										<input id="notifications_email_05" class="check_main" type="checkbox">
-										<label for="notifications_email_05">Окончание срока публикации объявлений</label>
-									</div>
-									<div class="field__box field__box_check">
-										<input id="notifications_email_06" class="check_main" type="checkbox">
-										<label for="notifications_email_06">Отчет по размещению вакансии</label>
-									</div>
-									<div class="field__box field__box_check">
-										<input id="notifications_email_07" class="check_main" type="checkbox">
-										<label for="notifications_email_07">Акт выполненных работ</label>
-									</div>
-								</div>
-								
-								<div class="button__c default__button">Сохранить</div>
-							</div>
-						</div>
-
-						<div class="cabinet__block cabinet__block_notifications_sms">
-							<div class="cabinet cabinet__name_top">Смс уведомления</div>
-							<div class="cabinet cabinet__container">
-								<div class="fields">
-									<div class="field__box field__box_check">
-										<input id="notifications_sms_01" class="check_main" type="checkbox">
-										<label for="notifications_sms_01">Оповещения о новых откликах на вакансии</label>
-									</div>
-									<div class="field__box field__box_check">
-										<input id="notifications_sms_02" class="check_main" type="checkbox">
-										<label for="notifications_sms_02">Оповещение о новой подборке резюме на вакансию</label>
-									</div>
-									<div class="field__box field__box_check">
-										<input id="notifications_sms_03" class="check_main" type="checkbox">
-										<label for="notifications_sms_03">Отчет по размещению вакансии</label>
-									</div>
-									<div class="field__box field__box_check">
-										<input id="notifications_sms_04" class="check_main" type="checkbox">
-										<label for="notifications_sms_04">Перенос в архив объявлений</label>
-									</div>
-								</div>
-								
-								<div class="button__c default__button">Сохранить</div>
-							</div>
-						</div>
-
-						<div class="cabinet__block cabinet__block_notifications_telegram">
-							<div class="cabinet cabinet__name_top">Telegram уведомления</div>
-							<div class="cabinet cabinet__container">
-								<div class="fields">
-									<div class="field__box field__box_check">
-										<input id="notifications_telegram_01" class="check_main" type="checkbox">
-										<label for="notifications_telegram_01">Резюме каждого кандидата</label>
-									</div>
-									<p class="cabinet__title cabinet__title_small">Подключенные чаты</p>
-									
-									<p class="cabinet__text cabinet__text_disabled cabinet__text_telegram">Если @Jobers_employes_bot уже был подключен ранее к чату, попробуйте удалить его, и подключиться заново, используя опции ниже.</p>
-									
-									
-									<div class="container__flex">
-										<div class="field__box field__box_check field__box_radio fbr_01">
-											<input id="notifications_telegram_r01" name="telegram-radio" class="radio_main" type="radio">
-											<label for="notifications_telegram_r01">Telegram desktop</label>
-											<a href="" class="cabinet__text cabinet__text_disabled fbr__link_hover">Уведомления в чат</a>
+						<div class="cabinet__block cabinet__block_your_requests">
+							<div class="cabinet cabinet__name_top">Ваши обращения</div>
+							<div class="cabinet cabinet__table_container">
+								<table class="table table__support_desktop">
+									<tbody>
+										<tr>
+											<td>Обращение</td>
+											<td>Номер</td>
+											<td>Дата</td>
+											<td>Обновлено</td>
+											<td>Кем создано</td>
+											<td>Статус</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle active"></span> <a class="current__requerst_open" href="">Смена тарифного плана</a></td>
+											<td>421151</td>
+											<td>22.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td class="open_td">Открыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span> <a href="">По поводу оплаты</a></td>
+											<td>232322</td>
+											<td>13.01.2025</td>
+											<td>22.01.2024</td>
+											<td>Морковкина Вера Васильевна</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span> <a href="">Ошибка с интеграцией</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Садыков Геннадий</td>
+											<td class="open_td">Открыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span> <a href="">Как изменить ответственного?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Морковкина Вера Васильевна</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span> <a href="">Куда попадают отклики с бесплатных площадок</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span> <a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span> <a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span> <a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span><a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span><a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span><a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span><a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span><a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span><a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span><a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+										<tr>
+											<td><span class="table__circle"></span><a href="">Пропал кандидат, где его найти?</a></td>
+											<td>51523</td>
+											<td>23.01.2024</td>
+											<td>22.01.2024</td>
+											<td>Жидов Михаил Степанович</td>
+											<td>Закрыто</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="sort__table__flex_mob">
+									<div class="sort__table_box">
+										<div class="box stb-01">
+											<p class="sort__name">Обращение</p>
+											<p class="sort__text"><span class="table__circle active"></span><a href="" class="current__requerst_open">Смена тарифного плана</a></p>
 										</div>
-										<div class="field__box field__box_check field__box_radio fbr_02">
-											<input id="notifications_telegram_r02" name="telegram-radio" class="radio_main" type="radio">
-											<label for="notifications_telegram_r02">Telegram web</label>
-											<a href="" class="cabinet__text cabinet__text_disabled fbr__link_hover">Уведомления в в группу</a>
+										<div class="box stb-02">
+											<p class="sort__name">Номер</p>
+											<p class="sort__text">215124</p>
+										</div>
+										<div class="box stb-03">
+											<p class="sort__name">Дата</p>
+											<p class="sort__text">22.05.2024</p>
+										</div>
+										<div class="box stb-04">
+											<p class="sort__name">Обновлено</p>
+											<p class="sort__text">22.01.2024</p>
+										</div>
+										<div class="box stb-05">
+											<p class="sort__name">Кем создано</p>
+											<p class="sort__text">Жидов Михаил Степанович</p>
+										</div>
+										<div class="box stb-06 open_td">
+											<p class="sort__name">Статус</p>
+											<p class="sort__text open_td">Открыто</p>
+										</div>
+									</div>
+									<div class="sort__table_box">
+										<div class="box stb-01">
+											<p class="sort__name">Обращение</p>
+											<p class="sort__text"><span class="table__circle"></span><a href="">Смена тарифного плана</a></p>
+										</div>
+										<div class="box stb-02">
+											<p class="sort__name">Номер</p>
+											<p class="sort__text">215124</p>
+										</div>
+										<div class="box stb-03">
+											<p class="sort__name">Дата</p>
+											<p class="sort__text">22.05.2024</p>
+										</div>
+										<div class="box stb-04">
+											<p class="sort__name">Обновлено</p>
+											<p class="sort__text">22.01.2024</p>
+										</div>
+										<div class="box stb-05">
+											<p class="sort__name">Кем создано</p>
+											<p class="sort__text">Морковкина Вера Васильевна</p>
+										</div>
+										<div class="box stb-06">
+											<p class="sort__name">Статус</p>
+											<p class="sort__text">Закрыто</p>
 										</div>
 									</div>
 								</div>
 								
-								<div class="button__c default__button">Сохранить</div>
 							</div>
-						</div>
-
-					</div>
-
-					<div class="cabinet__tab cabinet__tab_managers cabinet__tab_managers_full">
-						<div class="cabinet__inner_tab_button show__popup" data-popup="new__manager">Новый менджер</div>
-						<div class="cabinet__block cabinet__block_managers">
-							<div class="cabinet cabinet__name_top">Ваши менеджеры</div>
-
-							<!-- Добавить при отстутствии блоков менеджеров -->
-							<!-- <div class="cabinet cabinet__container">
-								<div class="button__c fill__button show__popup" data-popup="new__manager">Добавить менеджера</div>
-							</div> -->
-
-							<div class="cabinet cabinet__container">
-								<div class="manager">
-									<div class="cabinet__box cabinet__box_image"><img src="img/manager-nophoto.png" alt=""></div>
-									<div class="cabinet__box cabinet__box_info">
-										<p class="cabinet__title cabinet__text_bold">Алексеев Антон Борисович</p>
-										<p class="cabinet__subtitle">Менеджер</p>
-										<p class="cabinet__text">Телефон: <span class="cabinet__text cabinet__text_disabled">8-950-999-02-22</span></p>
-										<p class="cabinet__text">Email: <span class="cabinet__text cabinet__text_disabled">pochta@mail.ru</span></p>
-									</div>
-									<div class="manager__nav_button">
-										<svg class="manager__nav_three_dots" width="27" height="7" viewBox="0 0 27 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect width="7" height="7" rx="3.5" fill="#9098B4"/>
-											<rect x="10" width="7" height="7" rx="3.5" fill="#9098B4"/>
-											<rect x="20" width="7" height="7" rx="3.5" fill="#9098B4"/>
-										</svg>
-										<nav class="manager__nav_container">
-											<ul class="manager__nav">
-												<li class="mob__only">Алексеев Антон Борисович <span class="mob__close_nav"></span></li>
-												<li class="show__popup" data-popup="edit__manager">Редактировать</li>
-												<li class="show__popup" data-popup="delete__manager">Удалить</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-								<div class="manager">
-									<div class="cabinet__box cabinet__box_image"><img src="img/manager-nophoto.png" alt=""></div>
-									<div class="cabinet__box cabinet__box_info">
-										<p class="cabinet__title cabinet__text_bold">Олег Тинькофф</p>
-										<p class="cabinet__subtitle">Менеджер</p>
-										<p class="cabinet__text">Телефон: <span class="cabinet__text cabinet__text_disabled">8-950-999-02-22</span></p>
-										<p class="cabinet__text">Email: <span class="cabinet__text cabinet__text_disabled">pochta@mail.ru</span></p>
-									</div>
-									<div class="manager__nav_button">
-										<svg class="manager__nav_three_dots" width="27" height="7" viewBox="0 0 27 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect width="7" height="7" rx="3.5" fill="#9098B4"/>
-											<rect x="10" width="7" height="7" rx="3.5" fill="#9098B4"/>
-											<rect x="20" width="7" height="7" rx="3.5" fill="#9098B4"/>
-										</svg>
-										<nav class="manager__nav_container">
-											<ul class="manager__nav">
-												<li class="mob__only">Олег Тинькофф <span class="mob__close_nav"></span></li>
-												<li class="show__popup" data-popup="edit__manager">Редактировать</li>
-												<li class="show__popup" data-popup="delete__manager">Удалить</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-								<div class="manager">
-									<div class="cabinet__box cabinet__box_image"><img src="img/manager-nophoto.png" alt=""></div>
-									<div class="cabinet__box cabinet__box_info">
-										<p class="cabinet__title cabinet__text_bold">Владимир Владивостоков</p>
-										<p class="cabinet__subtitle">Менеджер</p>
-										<p class="cabinet__text">Телефон: <span class="cabinet__text cabinet__text_disabled">8-950-999-02-22</span></p>
-										<p class="cabinet__text">Email: <span class="cabinet__text cabinet__text_disabled">pochta@mail.ru</span></p>
-									</div>
-									<div class="manager__nav_button">
-										<svg class="manager__nav_three_dots" width="27" height="7" viewBox="0 0 27 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect width="7" height="7" rx="3.5" fill="#9098B4"/>
-											<rect x="10" width="7" height="7" rx="3.5" fill="#9098B4"/>
-											<rect x="20" width="7" height="7" rx="3.5" fill="#9098B4"/>
-										</svg>
-										<nav class="manager__nav_container">
-											<ul class="manager__nav">
-												<li class="mob__only">Олег Тинькофф <span class="mob__close_nav"></span></li>
-												<li class="show__popup" data-popup="edit__manager">Редактировать</li>
-												<li class="show__popup" data-popup="delete__manager">Удалить</li>
-											</ul>
-										</nav>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="cabinet__tab cabinet__tab_personal_account">
-						<div class="cabinet__inner_tab_button">Выставить счет</div>
-						<div class="cabinet__block cabinet__block_package">
-							<div class="cabinet cabinet__name_top">Пакет размещения</div>
-							<div class="cabinet cabinet__container">
-								<div class="cabinet__box cabinet__box_info">
-									<p class="cabinet__title">Минимальный с автообновлением</p>
-									<p class="cabinet__text cabinet__text_disabled">Количество: <span class="cabinet__text">1</span></p>
-									<p class="cabinet__text cabinet__text_disabled">Стоимость: <span class="cabinet__text">9 300 руб.</span></p>
-								</div>
-								<div class="cabinet__box cabinet__box_info">
-									
-									<div class="button__c border__button">Опубликовать вакансию</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="cabinet__block cabinet__block_services">
-							<div class="cabinet cabinet__name_top">Дополнительные услуги</div>
-							<div class="cabinet cabinet__container">
-								<div class="cabinet__box cabinet__box_info">
-									<p class="cabinet__title">Рерайтинг вакансии</p>
-									<p class="cabinet__text cabinet__text_disabled">Количество: <span class="cabinet__text">1</span></p>
-									<p class="cabinet__text cabinet__text_disabled">Стоимость: <span class="cabinet__text">2 500 руб.</span></p>
-								</div>
-								<div class="cabinet__box cabinet__box_info">
-									<p class="cabinet__title">Продвижение на сайте Avito (x5), 14 дней</p>
-									<p class="cabinet__text cabinet__text_disabled">Количество: <span class="cabinet__text">1</span></p>
-									<p class="cabinet__text cabinet__text_disabled">Стоимость: <span class="cabinet__text">3 400 руб.</span></p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="cabinet__tab cabinet__tab_integration">
-
-						<div class="cabinet__block cabinet__block_integration">
-							<div class="container__integration">
-								<div class="crm__box">
-									<img src="img/amo.png" alt="">
-									<div class="button__c default__button default__button_active show__popup" data-popup="crm__amo">Подключить</div>
-								</div>
-								<div class="crm__box">
-									<img src="img/bitrix.png" alt="">
-									<div class="button__c default__button default__button_active show__popup" data-popup="crm__bitrix">Подключить</div>
-								</div>
-								<div class="crm__box">
-									<img src="img/potoc.png" alt="">
-									<div class="buttons">
-										<div class="button__c default__button default__button_enabled">Работает</div>
-										<div class="button__c settings__button show__popup" data-popup="crm__potok"><span class="gear"></span></div>
-									</div>
-									
-								</div>
-								<div class="crm__box">
-									<img src="img/no-name.png" alt="">
-									<div class="buttons">
-										<div class="button__c default__button default__button_error">Ошибка</div>
-										<div class="button__c settings__button"><span class="gear"></span></div>
-									</div>
-								</div>
-							</div>
-								
 							
 						</div>
 
-
 					</div>
 
-					<div class="cabinet__tab cabinet__tab_email_templates">
-						<div class="cabinet__inner_tab_button show__popup" data-popup="newtemplate_email"><span class="plus">+</span> Добавить новый</div>
-						<div class="cabinet__block cabinet__block_email_templates">
-							<div class="cabinet cabinet__name_top">Шаблоны писем</div>
-							<div class="cabinet cabinet__container">
-								<div class="email__templates_box"><p class="cabinet__text_bold">Подумать</p> <span class="cabinet__link edit__email_template show__popup" data-popup="edittemplate_email">Редактировать</span></div>
-								<div class="email__templates_box"><p class="cabinet__text_bold">Приглашение на собеседование</p> <span class="cabinet__link edit__email_template show__popup" data-popup="edittemplate_email">Редактировать</span></div>
-								<div class="email__templates_box"><p class="cabinet__text_bold">Приглашение на собеседование (без отклика)</p> <span class="cabinet__link edit__email_template show__popup" data-popup="edittemplate_email">Редактировать</span></div>
-								<div class="email__templates_box"><p class="cabinet__text_bold">Отказ</p> <span class="cabinet__link edit__email_template show__popup" data-popup="edittemplate_email">Редактировать</span></div>
+					<div class="cabinet__tab cabinet__tab_questions">
+						<div class="sort__block sort__block_questions">
+							<div class="field__box field__box_search">
+								<input class="field field__search" type="search" placeholder="Поиск видео по ключевым фразам">
+								<button type="submit" class="loop__search_submit">
+									<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.8169 14.4335L11.0862 10.7029C12.1029 9.45954 12.6027 7.87297 12.4824 6.27139C12.3621 4.66981 11.6307 3.17575 10.4397 2.09824C9.24871 1.02073 7.68911 0.442221 6.08351 0.482366C4.47792 0.52251 2.94918 1.17824 1.81349 2.31392C0.677813 3.4496 0.0220832 4.97835 -0.0180617 6.58394C-0.0582065 8.18953 0.520305 9.74914 1.59781 10.9402C2.67532 12.1312 4.16938 12.8625 5.77096 12.9828C7.37254 13.1032 8.95911 12.6033 10.2025 11.5867L13.9331 15.3173C14.051 15.4311 14.2089 15.4941 14.3727 15.4927C14.5366 15.4913 14.6934 15.4256 14.8092 15.3097C14.9251 15.1938 14.9909 15.037 14.9923 14.8732C14.9937 14.7093 14.9307 14.5514 14.8169 14.4335ZM6.24999 11.7504C5.26108 11.7504 4.29438 11.4572 3.47213 10.9078C2.64989 10.3584 2.00903 9.57746 1.63059 8.66383C1.25215 7.7502 1.15313 6.74487 1.34606 5.77496C1.53899 4.80506 2.01519 3.91414 2.71445 3.21488C3.41371 2.51562 4.30463 2.03941 5.27453 1.84649C6.24444 1.65356 7.24977 1.75258 8.1634 2.13102C9.07703 2.50945 9.85793 3.15032 10.4073 3.97256C10.9567 4.79481 11.25 5.76151 11.25 6.75041C11.2485 8.07604 10.7212 9.34694 9.78388 10.2843C8.84652 11.2217 7.57561 11.7489 6.24999 11.7504Z" fill="#9098B4"/>
+									</svg>
+								</button>
+							</div>
+								<button type="submit" class="button__c fill__button button__search_quetion">Искать</button>
+						</div>
+						<div class="cabinet__block cabinet__block_questions">
+							<div class="block_question">
+								<p class="title__question">Как добавить менеджеров в личный кабинет?</p>
+								<div class="question__image_bg"></div>
+							</div>
+							<div class="block_question">
+								<p class="title__question">Как добавить менеджеров в личный кабинет?</p>
+								<div class="question__image_bg"></div>
+							</div>
+							<div class="block_question">
+								<p class="title__question">Как добавить менеджеров в личный кабинет?</p>
+								<div class="question__image_bg"></div>
+							</div>
+							<div class="block_question">
+								<p class="title__question">Как добавить менеджеров в личный кабинет?</p>
+								<div class="question__image_bg"></div>
+							</div>
+							<div class="block_question">
+								<p class="title__question">Как добавить менеджеров в личный кабинет?</p>
+								<div class="question__image_bg"></div>
+							</div>
+							<div class="block_question">
+								<p class="title__question">Как добавить менеджеров в личный кабинет?</p>
+								<div class="question__image_bg"></div>
+							</div>
+							<div class="block_question">
+								<p class="title__question">Как добавить менеджеров в личный кабинет?</p>
+								<div class="question__image_bg"></div>
+							</div>
+							<div class="block_question">
+								<p class="title__question">Как добавить менеджеров в личный кабинет?</p>
+								<div class="question__image_bg"></div>
+							</div>
+							<div class="block_question">
+								<p class="title__question">Как добавить менеджеров в личный кабинет?</p>
+								<div class="question__image_bg"></div>
 							</div>
 						</div>
+						<div class="button__c border__button show__more_question">Показать еще</div>
 
 					</div>
 
 				</div>
 				
-
-			
 			</div>
 
+		</div>
+
+		<div class="cabinet__style cabinet__new_requests">
+			<div class="container">
+				<a href="" class="button__back request__button_back">Назад</a>
+				<h2 class="title title__h2">Новое обращение в службу поддержки</h2>
+				<div class="new__requests">
+					<div class="cabinet__block cabinet__block__l">
+						<form action="">
+							<p class="text">Выберите отдел соотвествующий вашему запросу</p>
+							<div class="droplist droplist__select">
+								<form class="form__list" action="">
+									<div class="droplist__selected item droplist__result item"><span class="droplist__result_text" data-start="Выберите тему">Выберите тему</span> <span class="droplist__icon droplist__icon_cross"></span>
+										<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"></path>
+										</svg>
+									</div>
+									<ul class="droplist__items">
+										<li class="droplist__item"><span>Финансовые вопросы, оплата, лицевой счет, тарифы</span></li>
+										<li class="droplist__item"><span>Бухгалтерия: закрывающие документы, акты</span></li>
+										<li class="droplist__item"><span>Техническая поддержка: что то сломалось или не работает</span></li>
+										<li class="droplist__item"><span>Прочее</span></li>
+									</ul>
+								</form>
+							</div>
+							<p class="text">Назовите тему обращения </p>
+							<input class="field" type="text" placeholder="Тема обращения">
+							<textarea class="field__textarea" name="" id="" placeholder="Подробно опишите проблемы"></textarea>
+							<div class="buttons">
+								<button type="submit" class="button__c fill__button">Отправить</button> 
+								<div class="button__circle button__nav_option_request">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M15.8125 8C15.8125 8.24864 15.7137 8.4871 15.5379 8.66291C15.3621 8.83873 15.1236 8.9375 14.875 8.9375H8.9375V14.875C8.9375 15.1236 8.83873 15.3621 8.66291 15.5379C8.4871 15.7137 8.24864 15.8125 8 15.8125C7.75136 15.8125 7.5129 15.7137 7.33709 15.5379C7.16127 15.3621 7.0625 15.1236 7.0625 14.875V8.9375H1.125C0.87636 8.9375 0.637903 8.83873 0.462087 8.66291C0.286272 8.4871 0.1875 8.24864 0.1875 8C0.1875 7.75136 0.286272 7.5129 0.462087 7.33709C0.637903 7.16127 0.87636 7.0625 1.125 7.0625H7.0625V1.125C7.0625 0.87636 7.16127 0.637903 7.33709 0.462087C7.5129 0.286272 7.75136 0.1875 8 0.1875C8.24864 0.1875 8.4871 0.286272 8.66291 0.462087C8.83873 0.637903 8.9375 0.87636 8.9375 1.125V7.0625H14.875C15.1236 7.0625 15.3621 7.16127 15.5379 7.33709C15.7137 7.5129 15.8125 7.75136 15.8125 8Z" fill="#5898FF"/>
+									</svg>
+									<div class="mini__nav nav__request droplist__items">
+										<li class="droplist__item">Вставить шаблон</li>
+										<li class="droplist__item">Закрепить файл</li>
+									</div>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+					<div class="cabinet__block cabinet__block__r">
+						<p class="text">Мы собрали ответы на самые популярные ответы на вопросы пользователей в <a class="cabinet__link" href="">разделе видеоинструкций</a></p>
+						<p class="text text__bold">Мы отвечаем по будням с 09:00 до 19:00 по МСК.</p>
+						<p class="text">Обычно отвечаем в течении рабочего дня. В праздничные и официальные нерабочие дни время ответа может быть увеличено.</p>
+						<p class="text text__for_list">Здорово, если в обращении будет:</p>
+						<ul class="list">
+							<li>выбран проект, к которому относится вопрос</li>
+							<li>описана цель и задача, которую хотите решить</li>
+							<li>ваши действия, чтобы понимать, что было сделано</li>
+							<li>скриншоты, на которых видно, о чем речь</li>
+							<li>ваш номер телефона, если потребуются уточнения</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabinet__style cabinet__current_requests">
+			<div class="container">
+				<a href="" class="button__back request__button_back">Назад</a>
+
+				<div class="current__requests_head">
+					<h2 class="cabinet__text_bold">Обращение № 421151</h2>
+					<p class="text__sm cabinet__text_disabled">Статус: <span class="open_td">Открыто</span></p>
+					<div class="droplist droplist__select droplist__select_status_mob">
+						<form class="form__list" action="">
+							<div class="droplist__selected item droplist__result item"><span class="droplist__result_text" data-start="Открыто">Открыто</span> <span class="droplist__icon droplist__icon_cross"></span>
+								<svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#04B600"></path>
+								</svg>
+							</div>
+							<ul class="droplist__items">
+								<li class="droplist__item" data-item="Закрыто">Закрыть</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+				
+				<div class="chat__area">
+					<div class="chat__message chat__message_type01">
+						<div class="chat__user_image"><img src="img/user-female.png" alt=""></div>
+						<div class="chat__user_name_text">
+							<p class="text__sm chat__user_name">Ксения Алексеева</p>
+							<p class="text__sm chat__user_message">Заявка оставлена, наберет ближайшее время, пожалуйста ожидайте</p>
+						</div>
+						<div class="text__sm cabinet__text_disabled chat__message_time">14:52</div>
+					</div>
+					<div class="chat__message chat__message_type02">
+						<div class="chat__user_image"><img src="img/user-male.png" alt=""></div>
+						<div class="chat__user_name_text">
+							<p class="text__sm chat__user_name">Анатолий Горилов</p>
+							<p class="text__sm chat__user_message">Спасибо!</p>
+						</div>
+						<div class="text__sm cabinet__text_disabled chat__message_time">14:55</div>
+					</div>
+					<div class="chat__message chat__message_type01">
+						<div class="chat__user_image"><img src="img/user-female.png" alt=""></div>
+						<div class="chat__user_name_text">
+							<p class="text__sm chat__user_name">Ксения Алексеева</p>
+							<p class="text__sm chat__user_message">Могу чем то еще помочь?</p>
+						</div>
+						<div class="text__sm cabinet__text_disabled chat__message_time">14:52</div>
+					</div>
+					<div class="chat__message chat__message_type02">
+						<div class="chat__user_image"><img src="img/user-male.png" alt=""></div>
+						<div class="chat__user_name_text">
+							<p class="text__sm chat__user_name">Анатолий Горилов</p>
+							<p class="text__sm chat__user_message">Да, посмотрите какой красивый у меня котик</p>
+							<a href="img/cat.jpg" class="file__accept_name file__accept_image_open cabinet__link">cat.jpg</a>
+						</div>
+						<div class="text__sm cabinet__text_disabled chat__message_time">14:55</div>
+					</div>
+					<div class="chat__message chat__message_type01">
+						<div class="chat__user_image"><img src="img/user-female.png" alt=""></div>
+						<div class="chat__user_name_text">
+							<p class="text__sm chat__user_name">Ксения Алексеева</p>
+							<p class="text__sm chat__user_message">Котик красивый, спасибо за обращение и хорошего Вам дня!</p>
+						</div>
+						<div class="text__sm cabinet__text_disabled chat__message_time">14:52</div>
+					</div>
+				</div>
+				<div class="chat__area_message_enter">
+					<textarea name="" id="" class="enter__message" placeholder="Введите ваш ответ"></textarea>
+					<div class="chat__panel">
+						<div class="button__circle button__nav_option_request">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.8125 8C15.8125 8.24864 15.7137 8.4871 15.5379 8.66291C15.3621 8.83873 15.1236 8.9375 14.875 8.9375H8.9375V14.875C8.9375 15.1236 8.83873 15.3621 8.66291 15.5379C8.4871 15.7137 8.24864 15.8125 8 15.8125C7.75136 15.8125 7.5129 15.7137 7.33709 15.5379C7.16127 15.3621 7.0625 15.1236 7.0625 14.875V8.9375H1.125C0.87636 8.9375 0.637903 8.83873 0.462087 8.66291C0.286272 8.4871 0.1875 8.24864 0.1875 8C0.1875 7.75136 0.286272 7.5129 0.462087 7.33709C0.637903 7.16127 0.87636 7.0625 1.125 7.0625H7.0625V1.125C7.0625 0.87636 7.16127 0.637903 7.33709 0.462087C7.5129 0.286272 7.75136 0.1875 8 0.1875C8.24864 0.1875 8.4871 0.286272 8.66291 0.462087C8.83873 0.637903 8.9375 0.87636 8.9375 1.125V7.0625H14.875C15.1236 7.0625 15.3621 7.16127 15.5379 7.33709C15.7137 7.5129 15.8125 7.75136 15.8125 8Z" fill="#5898FF"/>
+							</svg>
+							<div class="mini__nav nav__request droplist__items">
+								<li class="droplist__item">Вставить шаблон</li>
+								<li class="droplist__item item__file"><input class="file__image_add" type="file" name="image" accept="image/jpeg,image/png,image/gif">Закрепить файл</li>
+							</div>
+						</div>
+						<a href="" class="file__accept_name cabinet__link"></a>
+						<button class="button__c default__button default__button_error">Закрыть обращение</button> 
+						<button type="submit" class="button__c fill__button submit__message">Отправить</button> 
+						
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</div>	

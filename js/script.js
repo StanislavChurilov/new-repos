@@ -1,187 +1,111 @@
 $(document).ready(function () {
 
     function dropL() {
-        $('.droplist__selected').click(function (e) {
-            let cross = $( ".droplist__icon_cross" ); 
-            
-            if ( !cross.is(e.target) 
-                && cross.has(e.target).length === 0 ) { 
-                    $(this).closest('.droplist').toggleClass('droplist_active');
-                    return false
-            }
-    
-        });
-        $('.droplist__item').click(function () {
-    
-            let currentVal = $(this).text();
-    
-            if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check')) {
-                $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
-            }
-           
-           if($(this).closest('.droplist').hasClass('droplist__select')) {
-            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentVal);
-           }
-    
-           if($(this).closest('.droplist').hasClass('droplist__check')) {
-    
-            $(this).closest('.droplist').find('.droplist__result').addClass();
-            let currentValChecked = $('.droplist__check .check:checked').map(function () {
-                return $(this).val();
-            }).get().join(', ');
-            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentValChecked);
-    
-            if (currentValChecked == 0) {
-                $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
-                $(this).closest('.droplist').find('.droplist__result_text').text('Выберите несколько вариантов');
-                $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_max');
-            }
-            else {
-                $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_max');
-            }
-            
-           }
-            
-            $(this).addClass('droplist__item_active').siblings().removeClass('droplist__item_active');
-            
-        });
-        $('.droplist__icon_cross').click(function () { 
-            $(this).closest('.droplist__result').removeClass('droplist__result_active');
-            $(this).closest('.droplist').find('.droplist__item').removeClass('droplist__item_active');
-            $(this).closest('.droplist').find('.droplist__field').val('');
-            if($(this).closest('.droplist').hasClass('droplist__select')) {
-                $(this).closest('.droplist').find('.droplist__result_text').text('Выберите 1 вариант');
-            }
-            if($(this).closest('.droplist').hasClass('droplist__fields')) {
-                $(this).closest('.droplist').find('.droplist__result_text').text('Заработная плата');
-            }
-        });
-    
-        $('.droplist__field').keyup(function () {
-            let currentFromVal = $('.droplist__field_from').val();
-            let currentToVal = $('.droplist__field_to').val();
-            let fromValResult = 'от ' + currentFromVal.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-            let toValResult = ' до ' + currentToVal.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-            $(this).closest('.droplist').find('.droplist__result').show();
-            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text('');
-            if($('.droplist__field_from').val() !== '') {
-                $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
-                $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult);
-            }
-            if($('.droplist__field_to').val()  !== '') {
-                $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
-                $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(toValResult);
-            }
-            if($('.droplist__field_from').val() !== '' && $('.droplist__field_to').val()  !== '') {
-                $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
-                $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult + toValResult);
-            }
-            if($('.droplist__field').val() == '') {
-                $(this).closest('.droplist').children('.droplist__result').removeClass('droplist__result_active');
-            }
-            
-        });
+        let startText;
+        let messageText;
+        let image;
+
+    $('.droplist__selected').click(function (e) {
+        $('.droplist').not($(this).closest('.droplist')).removeClass('droplist_active');
+        let cross = $( ".droplist__icon_cross" ); 
         
-        $('.cabinet__popup').mouseup(function (e) {
-            let drop = $( ".droplist" );
-            if (drop.has(e.target).length === 0){
-                drop.removeClass('droplist_active');
-            }
-        });
+        if ( !cross.is(e.target) 
+		    && cross.has(e.target).length === 0 ) { 
+                $(this).closest('.droplist').toggleClass('droplist_active');
+		}
+        
+    });
+    $('.droplist__item').click(function () {
+        startText = $(this).closest('.droplist').find('.droplist__result_text').data('start');
+        console.log(startText);
+        let currentVal = $(this).text();
+
+        if($(this).closest('.droplist').hasClass('droplist__select') || $(this).closest('.droplist').hasClass('droplist__check')) {
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
+        }
+       
+       if($(this).closest('.droplist').hasClass('droplist__select')) {
+        $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentVal);
+       }
+
+       if($(this).closest('.droplist').hasClass('droplist__check')) {
+
+        $(this).closest('.droplist').find('.droplist__result').addClass();
+        let currentValChecked = $(this).closest('.droplist').find('.check:checked').map(function () {
+            return $(this).val();
+        }).get().join(', ');
+        $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(currentValChecked);
+
+        if (currentValChecked == 0) {
+            $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result_text').text(startText);
+            $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_max');
+        }
+        else {
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_max');
+        }
+        
+       }
+        
+        $(this).addClass('droplist__item_active').siblings().removeClass('droplist__item_active');
+        
+    });
+    $('.droplist__icon_cross').click(function () { 
+        startText = $(this).closest('.droplist').find('.droplist__result_text').data('start');
+        $(this).closest('.droplist__result').removeClass('droplist__result_active');
+        $(this).closest('.droplist').find('.droplist__item').removeClass('droplist__item_active');
+        $(this).closest('.droplist').find('.droplist__field').val('');
+        if($(this).closest('.droplist').hasClass('droplist__select')) {
+            $(this).closest('.droplist').find('.droplist__result_text').text(startText);
+        }
+        if($(this).closest('.droplist').hasClass('droplist__fields')) {
+            $(this).closest('.droplist').find('.droplist__result_text').text(startText);
+        }
+    });
+
+    $('.droplist__field').keyup(function () {
+        let currentFromVal = $(this).closest('.droplist').find('.droplist__field_from').val();
+        let currentToVal = $(this).closest('.droplist').find('.droplist__field_to').val();
+        let fromValResult = 'от ' + currentFromVal.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        let toValResult = ' до ' + currentToVal.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        $(this).closest('.droplist').find('.droplist__result').show();
+        $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text('');
+
+        if(currentFromVal !== '' && currentToVal  == '') {
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult);
+        }
+        if(currentToVal  !== '' && currentFromVal == '') {
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(toValResult);
+        }
+        if(currentFromVal !== '' && currentToVal  !== '') {
+            $(this).closest('.droplist').find('.droplist__result').addClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result').children('.droplist__result_text').text(fromValResult + toValResult);
+        }
+        if(currentFromVal == '' && currentToVal == '') {
+            $(this).closest('.droplist').find('.droplist__result').removeClass('droplist__result_active');
+            $(this).closest('.droplist').find('.droplist__result_text').text(startText);
+        }
+        
+    });
+     // Использовать если списки в простом блоке
+     $('.wrapper').mouseup(function (e) {
+        let drop = $( ".droplist" );
+        if (drop.has(e.target).length === 0){
+            drop.removeClass('droplist_active');
+        }
+    });
     }
 
    
-
-    let vacancyBox = 
-    `<div class="field__box">
-    <p class="field__name_popup">Вакансии Jobers</p>
-    <div class="droplist droplist__select">
-        <div class="form__list" action="">
-            <div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
-                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-                </svg>
-            </div>
-            <ul class="droplist__items">
-                <li class="droplist__item">Менеджер по продажам (ID 424)</li>
-                <li class="droplist__item">Повар в цех (ID 4232)</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="field__box">
-    <p class="field__name_popup">Воронка/Статус</p>
-    <div class="droplist droplist__select">
-        <div class="form__list" action="">
-            <div class="droplist__selected item droplist__result item"><span class="droplist__result_text">Выберите вариант</span> <span class="droplist__icon droplist__icon_cross"></span>
-                <svg class="droplist__icon droplist__icon_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.222 2.34695L7.59695 7.97195C7.51857 8.05061 7.42542 8.11303 7.32286 8.15561C7.2203 8.1982 7.11035 8.22012 6.9993 8.22012C6.88825 8.22012 6.77829 8.1982 6.67573 8.15561C6.57317 8.11303 6.48003 8.05061 6.40164 7.97195L0.776641 2.34695C0.618132 2.18845 0.529083 1.97346 0.529083 1.7493C0.529083 1.52513 0.618132 1.31015 0.776641 1.15164C0.935149 0.993133 1.15013 0.904085 1.3743 0.904085C1.59846 0.904085 1.81344 0.993133 1.97195 1.15164L7 6.17969L12.028 1.15094C12.1866 0.992431 12.4015 0.903381 12.6257 0.903381C12.8499 0.903381 13.0648 0.992431 13.2234 1.15094C13.3819 1.30945 13.4709 1.52443 13.4709 1.7486C13.4709 1.97276 13.3819 2.18774 13.2234 2.34625L13.222 2.34695Z" fill="#9098B4"/>
-                </svg>
-            </div>
-            <ul class="droplist__items">
-                <li class="droplist__item">Воронка</li>
-                <li class="droplist__item">ВПО: ВЗЯТО В РАБОТУ</li>
-            </ul>
-        </div>
-    </div>
-</div>`
 
     $('.cabinet__tab_button').click(function () { 
         $(this).addClass('active').siblings().removeClass('active');
         $('.cabinet__tab').removeClass('active');
         $('.cabinet__tab').eq($(this).data('btn')).addClass('active');
     });
-    $('.close__popup, .cabinet__popup__cancel').click(function () { 
-        $('.cabinet__popup').hide();
-        $('.overlay').hide();
-        $('.close__popup').hide();
-    });
-    $('.overlay').click(function (e) { 
-        $(this).hide();
-        $('.close__popup').hide();
-        $('.cabinet__popup').hide();
-        $('.manager__nav_button').removeClass('active');
-    });
-    $('.show__popup').click(function () {
-        $('.manager__nav_button').removeClass('active');
-        
-        if($(this).data('popup') == 'new__manager') {
-            $('.cabinet__popup_manager_add').show();
-        }
-        if($(this).data('popup') == 'edit__manager') {
-            $('.cabinet__popup_manager_edit').show();
-        }
-        if($(this).data('popup') == 'delete__manager') {
-            $('.cabinet__popup_manager_delete').show();
-        }
-        if($(this).data('popup') == 'password__save') {
-            $('.cabinet__popup_password_save').show();
-        }
-        if($(this).data('popup') == 'profile__edit') {
-            $('.cabinet__popup_profile_edit').show();
-        }
-        if($(this).data('popup') == 'crm__bitrix') {
-            $('.cabinet__popup_crm_bitrix').show();
-        }
-        if($(this).data('popup') == 'crm__amo') {
-            $('.cabinet__popup_crm_amo').show();
-        }
-        if($(this).data('popup') == 'crm__potok') {
-            $('.cabinet__popup_crm_potok').show();
-        }
-        if($(this).data('popup') == 'newtemplate_email') {
-            $('.cabinet__popup_newtemplate_email').show();
-        }
-        if($(this).data('popup') == 'edittemplate_email') {
-            $('.cabinet__popup_edittemplate_email').show();
-        }
-        if($(this).data('popup') == 'delete__template') {
-            $('.cabinet__popup').hide();
-            $('.cabinet__popup_template_delete').show();
-        }
-        $('.overlay').show();
-        $('.close__popup').show();  
-    });
+   
     $('.switch__button').click(function () { 
         $(this).toggleClass('active');  
     });
@@ -196,11 +120,9 @@ $(document).ready(function () {
         $('.delete__profile_image').hide();
         $('.file__image').val('');
     });
-
-    $('.add__vacancy').click(function (e) { 
-        $(this).parent('.fileld__box_addvacancy').prepend(vacancyBox);
-        dropL();
-    });
+    if($(window).width() <= 768) {
+        $('.cabinet__tab_profile .field__search').attr('placeholder', 'Найти обращения');
+    }
 
     if($(window).width() <= 480) {
         $('.manager__nav_button svg').click(function (e) { 
@@ -213,7 +135,125 @@ $(document).ready(function () {
         });
     }
 
+    $('.button__create_request').click(function (e) { 
+        $('.cabinet__support').fadeOut();
+        $('.cabinet__new_requests').fadeIn();  
+    });
+    $('.request__button_back').click(function (e) {
+        e.preventDefault();
+        $('.cabinet__support').fadeIn();
+        $('.cabinet__new_requests').fadeOut();
+        if($(this).closest('.cabinet__current_requests')) {
+            $('.cabinet__support').fadeIn();
+            $('.cabinet__current_requests').fadeOut();
+        }
+        if($(this).closest('.cabinet__new_requests')) {
+            $('.cabinet__support').fadeIn();
+            $('.cabinet__new_requests').fadeOut();
+        }
+    });
+
+    $('.button__nav_option_request').click(function (e) { 
+        $(this).children('.nav__request').fadeToggle();
+    });
+
+    $('.file__image_add').change(function (event) { 
+        // alert($(this)[0].files[0].name);
+        $(this).closest('.chat__panel').find('.file__accept_name').text($(this)[0].files[0].name);
+        $(this).closest('.chat__panel').find('.file__accept_name').attr('href', '../img/' + $(this)[0].files[0].name);
+    });
+
+    function getUserImage() {
+        messageText = $('.enter__message').val();
+        image = $('.chat__panel .file__accept_name').attr('href');
+        imageName = $('.chat__panel .file__accept_name').text();
+
+        let messageTemplateAnswer = 
+        `
+        <div class="chat__message chat__message_type02">
+            <div class="chat__user_image"><img src="img/user-male.png" alt=""></div>
+            <div class="chat__user_name_text">
+                <p class="text__sm chat__user_name">Анатолий Горилов</p>
+                <p class="text__sm chat__user_message">${messageText}</p>
+                <a href="${image}" class="file__accept_name file__accept_image_open cabinet__link">${imageName}</a>
+            </div>
+            <div class="text__sm cabinet__text_disabled chat__message_time">14:55</div>
+        </div>
+        `
+        if(messageText !== '' || image !== '') {
+            $('.chat__area').append(messageTemplateAnswer);
+        }
+        else {
+            alert('Введите сообщение или выберите картику')
+        }
+        popupImageOpen();
+    }
+
+    function resetImageFileValueText() {
+        messageText = $('.enter__message').val('');
+        // image = $('.button__nav_option_request .file__accept_name').attr('href', '');
+        // imageName = $('.button__nav_option_request .file__accept_name').text('');
+        $('.file__image_add').val(null);
+        $('.enter__message').val('');
+    }
+
+    $('.submit__message').click(function (e) { 
+        e.preventDefault();
+        getUserImage();
+        
+        $(this).siblings('.file__accept_name').attr('href', '');
+        $(this).siblings('.file__accept_name').text('');
+        
+        resetImageFileValueText();
+        
+        $('.chat__area').animate({ scrollTop: $('.chat__area').prop("scrollHeight")}, 700);
+        
+        console.log($('.file__image_add').val());
+        
+    });
+    function popupImageOpen() {
+        $('.file__accept_image_open').click(function (e) { 
+            e.preventDefault();
+            $('.popup__image img').attr('src', 'img/' + $(this).text());
+            $('.popup__image').fadeIn();
+            $('.popup__image_button_download').children('a').attr('href', 'img/' + $(this).text());
+        });
+    }
+    popupImageOpen();
+    
+
+    $('.current__requerst_open').click(function (e) { 
+        e.preventDefault();
+        $('.cabinet__support').fadeOut();
+        $('.cabinet__current_requests').fadeIn();  
+    });
+
+    $('.popup__image_button_close').click(function (e) { 
+        $(this).closest('.popup__image').fadeOut();
+    });
+
+    $('.show__more_question').click(function () {
+        $(this).siblings('.cabinet__block_questions').toggleClass('show');
+        if($(this).siblings('.cabinet__block_questions').hasClass('show')) {
+            $(this).text('Скрыть');
+        }
+        else {
+            $(this).text('Показать еще');
+        }
+        
+    });
+
+    
+
     
     dropL();
+
+    $('.droplist__select_status_mob .droplist__item').click(function (e) { 
+        let currentDataValue = $(this).data('item');
+        console.log(currentDataValue);
+        $(this).closest('.droplist__select_status_mob').find('.droplist__result_text').text(currentDataValue);
+        $(this).parent('.droplist__items').fadeOut();
+        $(this).closest('.droplist__select_status_mob').removeClass('droplist_active');
+    });
     
 });
